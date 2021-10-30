@@ -1,0 +1,22 @@
+{
+  "name": "fw12_dunzo_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css:build": "tailwind build ./CSS/style.css -o ./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dineshcyber/FW12_Dunzo_Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dineshcyber/FW12_Dunzo_Project/issues"
+  },
+  "homepage": "https://github.com/dineshcyber/FW12_Dunzo_Project#readme",
+  "dependencies": {
+    "tailwindcss": "^2.2.19"
+  }
+}

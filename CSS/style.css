@@ -1,3 +1,13 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+main{
+    box-sizing: border-box;
+}
+/* Header */
 .svg_location{
     height: 20px;
     width: 16px;
@@ -52,3 +62,102 @@ header{
     color: inherit;
     display: flex;
 }
+.logo_img{
+    box-sizing: content-box;
+}
+
+.svg_location_div{
+    box-sizing: border-box;
+}
+
+.svg_location_div{
+    box-sizing: border-box;
+    z-index: 250;
+    position: relative;
+}
+.svg_location_data{
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    max-width: 200px;
+    margin-left: 46px;
+}
+
+.svg_location_paragraph{
+    color: rgb(15, 25, 56);
+    font-size: 14px;
+    margin-left: 4px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 600;
+    line-height: 24px;
+    overflow: unset;
+}
+
+.svg_location_drop{
+    height: 12px;
+    width: 12px;
+    fill: rgb(0, 179, 122);
+    flex-shrink: 0;
+    margin-left: 4px;
+}
+
+.header_middle{
+    box-sizing: border-box;
+    display: flex;
+}
+
+.header_middle_anchor{
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+.partner_button{
+    padding: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    color: rgb(23, 30, 48);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+.header_middle_business{
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+}
+.business_button{
+    padding: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    color: rgb(23, 30, 48);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+}
+.business_button_svg{
+    fill: #000;
+    height: 12px;
+    width: 12px;
+    margin-left: 6px;
+}
+/* Header */

@@ -217,3 +217,175 @@ header .header_right{
     border-radius: 30px;
     font-weight: bold;
 }
+
+/*  */
+
+.download_strip_div{
+    box-sizing: border-box;
+    display: flex;
+    margin: auto;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 44px;
+    margin-top: 78px;
+}
+
+.download_strip{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+90.05deg, rgb(9, 17, 37) -2.5%, rgb(33, 61, 133) 100.83%);
+}
+.download_strip_inner{
+    box-sizing: border-box;
+    display: flex;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0px auto;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 100%;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.download_strip_info{
+    box-sizing: border-box;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+}
+.download_strip_img{
+    box-sizing: border-box;
+    display: flex;
+    margin-right: 16px;
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-top: 4px;
+}
+.download_strip_img img{
+    margin-left: 2px;
+    margin-top: -10px;
+}
+.download_strip_para{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: rgb(237, 238, 252);
+    margin-top: 15px;
+}
+
+.dunzo_mobile_app{
+    box-sizing: border-box;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+}
+.dunzo_mobile_app_para{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 18px;
+    cursor: pointer;
+    color: rgb(0, 179, 122);
+}
+.dunzo_mobile_app_svg{
+    box-sizing: border-box;
+    margin-top: 8px;
+    padding-left: 4px;
+    cursor: pointer;
+}
+.dunzo_mobile_app_svg svg{
+    height: 16px;
+    fill: rgb(0, 179, 122);
+    transform: rotate(-90deg);
+}
+
+.nav_bar{
+    box-sizing: border-box;
+    width: 100%;
+}
+.breadcum_menu{
+    box-sizing: border-box;
+    display: flex;
+    background: rgb(247, 253, 250);
+    border-radius: 4px;
+    padding: 32px 0px;
+}
+.breadcum_menu > div{
+    overflow: hidden;
+    white-space: nowrap;
+}
+.breadcum_menu_inner{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0px auto;
+    max-width: 1024px;
+}
+.breadcum_list{
+    box-sizing: border-box;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+}
+.breadcum_listitem{
+    box-sizing: border-box;
+    display: inline-flex;
+}
+.breadcum_listitem a{
+    display: inline-flex;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.breadcum_listitem a span{
+    opacity: 1;
+    color: rgb(0, 179, 122);
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+}
+meta{
+    display: none;
+}
+.breadcum_arrow_svg{
+    box-sizing: border-box;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+}
+.breadcum_arrow_svg svg{
+    width: 8px;
+    height: 8px;
+    fill: rgb(201, 205, 216);
+}
+.breadcum_list h3{
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+}
+
+.whystepout_div{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgb(247, 253, 250);
+    padding-bottom: 48px;
+}
+.whystepout_div_inner{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0px auto;
+    max-width: 1024px;
+}

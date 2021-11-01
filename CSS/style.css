@@ -389,3 +389,121 @@ meta{
     margin: 0px auto;
     max-width: 1024px;
 }
+.whystepout_div_inner h1{
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: rgb(23, 30, 48);
+    line-height: normal;
+    letter-spacing: normal;
+}
+.whystepout_div_inner p{
+    font-size: 16px;
+    color: rgb(111, 117, 136);
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: normal;
+}
+.items{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgb(247, 253, 250);
+    padding-bottom: 24px;
+}
+.items_inner{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0px auto;
+    max-width: 1024px;
+}
+.item_block{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+}
+.item_block:last-of-type{
+    margin-bottom: 0;
+}
+.item_anchor{
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    position: relative;
+    margin-right: 16px;
+}
+.item_img{
+    border-radius: 8px;
+    box-sizing: content-box;
+    width: 244px;
+    height: 180px;
+}
+.available{
+    box-sizing: border-box;
+    display: flex;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background-color: rgb(255, 0, 0);
+}
+.available p{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: normal;
+    letter-spacing: normal;
+    color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+.small_items{
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: rgb(247, 253, 250);
+    width: 100%;
+    padding-bottom: 48px;
+}
+.small_items_inner{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0px auto;
+    max-width: 1024px;
+}
+.small_items_block{
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 16px;
+}
+.small_items_block:last-of-type a{
+    margin-bottom: 0;
+}
+.small_items_anchor{
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+    padding: 20px 16px 16px;
+    position: relative;
+    box-shadow: rgb(0 0 0 / 6%) 0px 4px 7px;
+}
+
+.small_items_anchor a{
+    box-sizing: content-box;
+    width: 40px;
+    height: 40px;
+} 
+.small_items_anchor p{
+    font-size: 12px;
+    color: rgb(15, 25, 56);
+    margin-top: 12px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: normal;
+}

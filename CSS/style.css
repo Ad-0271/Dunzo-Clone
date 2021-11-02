@@ -792,3 +792,18 @@ min-height: 1px;
     letter-spacing: normal;
     margin: 0;
 }
+
+/*  */
+
+footer{
+    box-sizing: border-box;
+    display: flex;
+    background-color: rgb(23, 30, 48);
+}
+.footer_inner{
+    box-sizing: border-box;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px auto;
+    max-width: 1024px;
+}

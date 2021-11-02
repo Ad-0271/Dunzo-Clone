@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
-    <header>
-        <div class="header_box">
+    <header id="navbar">
+
+    </header>
+
+        <!-- <div class="header_box">
             <div class="header_left">
-                <img src="https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-4d2d81aefcf296bc100d9edc114c2ea5.png" alt="">
+                <img src="https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-4d2d81aefcf296bc100d9edc114c2ea5.png" alt=""/>
                 <div class="svg_location_div">
                     <div class="svg_location_box">
                         <div class="svg_location_data">
@@ -52,8 +55,8 @@
                         <p class="signin_button">Sign in</p>
                     </div>
             </div>
-        </div>
-    </header>
+        </div> -->
+    
     <div class="download_strip_div">
         <div class="download_strip">
             <div class="download_strip_inner">
@@ -608,3 +611,10 @@
     </footer>
 </body>
 </html>
+
+<script type="module">
+
+import navbar from "./components/navbar.js";
+  let navbar_div = document.getElementById("navbar");
+  navbar_div.innerHTML = navbar();
+</script>

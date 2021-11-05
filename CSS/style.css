@@ -812,7 +812,9 @@ footer{
 .footer_inner_head{
     box-sizing: border-box;
     flex-direction: column;
-    padding-bottom: 64px;border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 64px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 64px;
 }
 .footer_inner_heading{
     line-height: normal;
@@ -827,4 +829,68 @@ footer{
     color: rgb(183, 186, 195);
     line-height: 18px;
     margin: 0;
+}
+.footer_inner_body{
+    box-sizing: border-box;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    display: flex;
+}
+.footer_inner_body_logo{
+    box-sizing: border-box;
+    margin-right: 50px;
+    flex-shrink: 0;
+}
+.footer_inner_body_logo a{
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.footer_inner_body_logo a img{
+    box-sizing: content-box;
+    width: 70px;
+    height: 70px;
+}
+.dunzo_pages_head{
+    box-sizing: border-box;
+    flex: 1 1 0%;
+}
+.dunzo_pages_head h4{
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.dunzo_pages_list{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.dunzo_pages_list_inner{
+    box-sizing: border-box;
+    margin-top: 16px;
+}
+.dunzo_pages_list_inner a{
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.dunzo_service_list{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.footer_image{
+    box-sizing: border-box;
+}
+.footer_image img{
+    box-sizing: content-box;
+    width: 260px;
+    height: 200px;
 }

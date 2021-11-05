@@ -375,7 +375,8 @@ meta{
 .breadcum_list h3{
     font-size: 12px;
     line-height: 16px;
-    font-weight: 600;
+    font-weight: 300;
+    color: rgb(168, 177, 206);
 }
 
 /*  */

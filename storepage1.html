@@ -318,6 +318,25 @@
       div1.style.margin = "20px";
    //   div1.style.boxShadow = "rgba(0, 0, 0, 0.35) 0px 5px 15px;";
 
+
+   div1.addEventListener("mouseover", () => {
+        div1.style.display = "grid";
+        div1.style.gridTemplateColumns = "30% 70%";
+        div1.style.gridGap = "20px";
+        div1.style.margin = "20px";
+        div1.style.borderRadius = "10px";
+        div1.style.boxShadow = "rgba(0, 0, 0, 0.35) 0px 5px 15px";
+      });
+      div1.addEventListener("mouseout", () => {
+        div1.style.boxShadow = "none";
+        div1.style.display = "grid";
+        div1.style.gridTemplateColumns = "30% 70%";
+        div1.style.gridGap = "20px";
+        div1.style.margin = "20px";
+        div1.style.borderRadius = "10px";
+      });
+
+
       title1.style.margin = "0";
       title1.style.padding = "5px 0px";
       title1.style.fontWeight = "500";

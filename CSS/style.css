@@ -800,6 +800,7 @@ footer{
     box-sizing: border-box;
     display: flex;
     background-color: rgb(23, 30, 48);
+    padding: 64px 24px;
 }
 .footer_inner{
     box-sizing: border-box;
@@ -807,4 +808,23 @@ footer{
     width: 100%;
     margin: 0px auto;
     max-width: 1024px;
+}
+.footer_inner_head{
+    box-sizing: border-box;
+    flex-direction: column;
+    padding-bottom: 64px;border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.footer_inner_heading{
+    line-height: normal;
+    letter-spacing: normal;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    margin: 0px 0px 12px 0px;
+}
+.footer_inner_para{
+    font-weight: 300;
+    letter-spacing: normal;
+    color: rgb(183, 186, 195);
+    line-height: 18px;
+    margin: 0;
 }

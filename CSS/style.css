@@ -898,10 +898,4 @@ footer{
     height: 200px;
 }
 
-/* media */
 
-@media (min-width: 1024px){
-    .items_inner {
-        max-width: 1024px;
-    }
-}

@@ -84,18 +84,27 @@
       }
       #p-r-m i {
         font-size: 20px;
-        margin: auto 0;
+        margin: auto 5%;
+        margin-right: 2px;
       }
       #p-r-m input {
-        padding-left: 10px;
+        /* padding-left: 10px; */
         font-family: "Gilroy-Medium", sans-serif;
         border: 0px solid white;
         width: 100%;
       }
       #p-r-b {
+        margin: 0 5%;
+      }
+      #p-r-b i {
+        font-size: 20px;
+        margin: auto 0;
       }
       #p-r-b > div {
         display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        line-height: 0;
       }
       /* -------Panels Box End- ------- */
     </style>
@@ -137,11 +146,10 @@
           />
         </div>
         <div id="p-r-b">
-          <div>
+          <div style="justify-content: left">
             <i class="material-icons">turned_in_not</i>
-            <h3>Invoice</h3>
+            <h3 style="padding-left: 10px">Invoice</h3>
           </div>
-          <hr />
           <div>
             <p>Item total</p>
             <p>908</p>
@@ -158,8 +166,8 @@
           </div>
           <hr />
           <div>
-            <p>To pay</p>
-            <p>958</p>
+            <h3>To pay</h3>
+            <h3>958</h3>
           </div>
         </div>
       </div>

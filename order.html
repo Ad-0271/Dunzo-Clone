@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="stylesheet" href="./style/style.css">
+  </head>
+  <body>
+    <header id="navbar">
+     
+    </header>
+    <div class="container">
+      <div class="box1">
+        <div class="title">
+          <h1>Send packages</h1>
+          <p>Your on demand local courier</p>
+        </div>
+        <div>
+          <div class="cont1">
+            <div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div class="cont2">
+            <div class="adress1">
+              <p>PICKUP LOCATION</p>
+              <span class="star1">*</span>
+              <input type="text" placeholder="Search pickup location" />
+            </div>
+            <div class="adress2">
+              <p>DROP POINT</p>
+              <span class="star2">*</span>
+              <input type="text " placeholder="Search drop location" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <input type="text" name="instructions" autocomplete="off" value="" disabled="" placeholder="Any instructions for the delivery partner?" class="">
+          </div>
+          <div class="mid">
+            <p class="sc-1gu8y64-0 eZLYCO qbo5gq-9 gbWHiw">By confirming I accept this order doesn’t contain illegal/resticted items, if illegal/restricted items are found by Dunzo Partner, 
+              they may report it to the law enforcement authorities.<a href="/terms" target="_blank" class="jxbqi7-0 qbo5gq-10 gnGJJT">Terms and Conditions</a></p>
+          </div>
+          <div>
+            <button >Confirm Order</button>
+          </div>
+        </div>
+      </div>
+      <div class="box2">
+        <div>
+          <p color="green.3" class="top">Some do’s &amp; Dont’s</p>
+        </div>
+        <div>
+          <span class="heading">No Purchases - </span
+          ><span class="content"
+            >Delivery partner would not be able to make any purchase</span
+          >
+        </div>
+        <div>
+          <span class="heading"
+            >Package Weight<!-- -->
+            - </span
+          ><span class="content"
+            >We cannot deliver items that can’t be easily carried on bike</span
+          >
+        </div>
+        <div>
+          <span class="heading">
+            No Autos/Cabs<!-- -->
+            - </span
+          ><span class="content"
+            >We will not be able to get something transported via these</span
+          >
+        </div>
+        <div>
+          <span class="heading">
+            Restricted/Illegal Item<!-- -->
+            - </span
+          ><span class="content"
+            >Please don’t hand over any restricted item</span
+          >
+        </div>
+        <div>
+          <img
+            src="https://resources.dunzo.com/web-assets/prod/_next/static/images/packages_pnd_small-8c969b49a1b0b58e35972d119309503b.png"
+            alt="pnd img"
+            title="pnd img"
+            width="308"
+            height="126"
+            class="sc-1go0t46-0 eZPzmn"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="module">
+
+  import navbar from "./components/navbar.js";
+    let navbar_div = document.getElementById("navbar");
+    navbar_div.innerHTML = navbar();
+  
+   
+  </script>

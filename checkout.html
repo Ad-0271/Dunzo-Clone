@@ -173,4 +173,16 @@
     </div>
   </body>
 </html>
-<script></script>
+<script>
+  //Get cart details
+  let products = JSON.parse(localStorage.getItem(`dunzoCart`));
+  // console.log(products);
+
+  //Display cart in Right Panel - Start
+  function cartShow() {
+    products.forEach((el) => {
+      console.log(el);
+    });
+  }
+  cartShow();
+</script>

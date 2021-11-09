@@ -49,10 +49,10 @@
       #panel-r {
         background-color: white;
         margin-top: 5%;
-        height: 1000px;
         border-radius: 10px;
       }
       #panel-l {
+        border: 1px solid red;
         width: 70%;
         margin-left: 7%;
       }
@@ -61,11 +61,26 @@
         width: 30%;
       }
       #p-r-t {
+        border: 1px dashed cyan;
+      }
+      #p-r-t-t {
         display: flex;
+        justify-content: space-between;
+        margin: 0 5%;
+        border: 1px solid red;
       }
-      #p-r-t p:nth-child(1) {
-        /* font-size: large; */
+      #p-r-t-t p:nth-child(1) {
+        font-size: 25px;
+        font-weight: bold;
       }
+      #p-r-t-t p:nth-child(2) {
+        color: gray;
+        margin: auto 0;
+      }
+      #p-r-t-m {
+        margin: 0 5%;
+      }
+
       /* -------Panels Box End- ------- */
     </style>
   </head>
@@ -82,13 +97,19 @@
     </div>
     <div id="panels">
       <div id="panel-l"></div>
+      <!--  -->
       <div id="panel-r">
+        <!--  -->
         <div id="p-r-t">
-          <p>Your Cart</p>
-          <p>(4 Items)</p>
+          <div id="p-r-t-t">
+            <p>Your Cart</p>
+            <p>(4 Items)</p>
+          </div>
+          <div id="p-r-t-m">
+            <p>From nature basket</p>
+            <hr />
+          </div>
         </div>
-        <p>From nature basket</p>
-        <hr />
       </div>
     </div>
   </body>

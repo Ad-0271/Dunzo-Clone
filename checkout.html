@@ -18,7 +18,7 @@
       /* -------Header Start------- */
       #header {
         background-color: #ffffff;
-        height: 80px;
+        height: 70px;
         display: flex;
         justify-content: space-between;
       }
@@ -40,6 +40,27 @@
       }
       /* -------Header End------- */
       /* -------Panels Box Start------- */
+      #panels {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+      }
+      #panel-l,
+      #panel-r {
+        background-color: white;
+        margin-top: 5%;
+        height: 1000px;
+        border: 1px solid red;
+        border-radius: 10px;
+      }
+      #panel-l {
+        width: 70%;
+        margin-left: 7%;
+      }
+      #panel-r {
+        margin-right: 7%;
+        width: 30%;
+      }
       /* -------Panels Box End- ------- */
     </style>
   </head>
@@ -55,9 +76,9 @@
       </div>
     </div>
     <div id="panels">
-      <div></div>
-      <div></div>
-      <div></div>
+      <div id="panel-l"></div>
+      <div id="panel-r"></div>
     </div>
   </body>
 </html>
+<script></script>

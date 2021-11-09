@@ -81,10 +81,23 @@
         font-size: 14px;
         display: flex;
         justify-content: space-between;
-        border: 1px solid red;
+        /* border: 1px solid red; */
       }
-      #p-r-t-b li {
-        margin: auto 0;
+      #addRemove {
+        display: flex;
+        border: 2px solid gainsboro;
+        padding: 3%;
+        height: 10px;
+        border-radius: 20px;
+      }
+      #addRemove button {
+        border: none;
+        margin: auto;
+        background-color: white;
+        font-size: 25px;
+      }
+      #addRemove p {
+        margin: auto;
       }
       /* -------- */
       #p-r-m {
@@ -210,10 +223,14 @@
       let buttonAdd = document.createElement(`button`);
       buttonAdd.textContent = `+`;
 
+      let addRemove = document.createElement(`div`);
+      addRemove.setAttribute(`id`, `addRemove`);
+      addRemove.append(buttonRemove, count, buttonAdd);
+
       let price = document.createElement(`p`);
       price.textContent = `₹ ` + el.price;
 
-      div.append(name, buttonRemove, count, buttonAdd, price);
+      div.append(name, addRemove, price);
 
       displayProdBox.append(div);
     });

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("http://fonts.cdnfonts.com/css/gilroy-bold");
+      body {
+        background-color: #f0f5f7;
+        font-family: "Gilroy-Medium", sans-serif;
+      }
+      /* -------Header Start------- */
+      #header {
+        background-color: #ffffff;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+      }
+      #logo {
+        margin: auto;
+        height: 30px;
+        margin-left: 70px;
+        cursor: pointer;
+      }
+      .material-icons {
+        font-size: 35px;
+      }
+      #profile {
+        cursor: pointer;
+        margin: auto;
+        margin-right: 80px;
+        line-height: 0px;
+        font-size: 13px;
+      }
+      /* -------Header End------- */
+      /* -------Panels Box Start------- */
+      #panels {
+        display: flex;
+        justify-content: space-between;
+        gap: 35px;
+      }
+      #panel-l,
+      #panel-r {
+        background-color: white;
+        margin-top: 5%;
+        border-radius: 10px;
+      }
+      #panel-l {
+        border: 1px solid red;
+        width: 70%;
+        margin-left: 7%;
+      }
+      #panel-r {
+        margin-right: 7%;
+        width: 30%;
+      }
+      #p-r-t {
+        margin: 0 5%;
+      }
+      #p-r-t-t {
+        display: flex;
+        justify-content: space-between;
+      }
+      #p-r-t-t p:nth-child(1) {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      #p-r-t-t p:nth-child(2) {
+        color: gray;
+        margin: auto 0;
+      }
+      #p-r-m {
+        padding: 5px;
+        height: 35px;
+        border-top: 10px solid #f0f5f7;
+        display: flex;
+        border-bottom: 10px solid #f0f5f7;
+      }
+      #p-r-m i {
+        font-size: 20px;
+        margin: auto 5%;
+        margin-right: 2px;
+      }
+      #p-r-m input {
+        /* padding-left: 10px; */
+        font-family: "Gilroy-Medium", sans-serif;
+        border: 0px solid white;
+        width: 100%;
+      }
+      #p-r-b {
+        margin: 0 5%;
+      }
+      #p-r-b i {
+        font-size: 20px;
+        margin: auto 0;
+      }
+      #p-r-b > div {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        line-height: 0;
+      }
+      /* -------Panels Box End- ------- */
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <img
+        id="logo"
+        src="https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-4d2d81aefcf296bc100d9edc114c2ea5.png"
+      />
+      <div id="profile">
+        <i class="material-icons">person_outline</i>
+        <p>Profile</p>
+      </div>
+    </div>
+    <div id="panels">
+      <div id="panel-l"></div>
+      <!--  -->
+      <div id="panel-r">
+        <div id="p-r-t">
+          <div id="p-r-t-t">
+            <p>Your Cart</p>
+            <p>(4 Items)</p>
+          </div>
+          <div id="p-r-t-m">
+            <p>From nature basket</p>
+            <hr />
+          </div>
+          <div id="p-r-t-b">
+            <li>Potato</li>
+          </div>
+        </div>
+        <div id="p-r-m">
+          <i class="material-icons">input</i>
+          <input
+            type="text"
+            placeholder="Add instructions related to delivery?"
+          />
+        </div>
+        <div id="p-r-b">
+          <div style="justify-content: left">
+            <i class="material-icons">turned_in_not</i>
+            <h3 style="padding-left: 10px">Invoice</h3>
+          </div>
+          <div>
+            <p>Item total</p>
+            <p>908</p>
+          </div>
+          <hr />
+          <div>
+            <p>Packing</p>
+            <p>20</p>
+          </div>
+          <hr />
+          <div>
+            <p>Partner delivery fee</p>
+            <p>30</p>
+          </div>
+          <hr />
+          <div>
+            <h3>To pay</h3>
+            <h3>958</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script></script>

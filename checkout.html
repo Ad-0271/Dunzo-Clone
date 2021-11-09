@@ -95,6 +95,9 @@
       #p-r-b {
         height: 100px;
       }
+      #p-r-b > div {
+        display: flex;
+      }
       /* -------Panels Box End- ------- */
     </style>
   </head>
@@ -134,7 +137,16 @@
             placeholder="Add instructions related to delivery?"
           />
         </div>
-        <div id="p-r-b"></div>
+        <div id="p-r-b">
+          <div>
+            <i class="material-icons">turned_in_not</i>
+            <h3>Invoice</h3>
+          </div>
+          <hr />
+          <div>
+            <p>Item total</p>
+          </div>
+        </div>
       </div>
     </div>
   </body>

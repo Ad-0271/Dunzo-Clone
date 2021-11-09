@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>items</title>
+    <style>
+        *{
+            /* border: 1px solid black; */
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        #Market_name{
+            display: flex;
+        }
+        #Market_name img{
+            margin-left: 150px;
+            height: 150px;
+            width: 150px;
+            border-radius: 5px;
+
+        }
+        #Market_name div{
+            margin-top: 50px;
+            margin-left: 10px;
+        }
+        #search{
+            margin-top: 10px;
+            /* text-align: center; */
+            border: 1px solid rgb(104, 102, 102)
+        }
+        input{
+            height: 38px;
+            width: 33%;
+            border-radius: 8px;
+            margin: 5px 0 5px 400px;
+        }
+        img {
+            width: 20%;
+            height: 60px;
+            margin-top: 15px;
+            /* float: left; */
+        }
+        .box{
+            display: flex;
+        }
+        .details{
+            width: 100px;
+            margin-left: 8px;
+            margin-top: 11px;
+        }
+        .btn{
+            width: 80px;
+            height: 28px;
+            margin-top: 11px;
+            margin-left: 40px;
+            border-radius: 9px;
+        }
+        #diff_cat{
+            margin-left: 263px;
+        }
+        #products{
+            margin-left:40px;
+            /* border: 1px solid black; */
+            width: 450px;
+        }
+        #lowerDiv{
+            margin-top: 5px;
+           display: flex;
+           text-align: right;
+        }
+        #cart{
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="Market_name">
+     <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-220,h-220,cm-pad_resize_store_thumbnail/stores/5e252a0e-ba37-4b86-a1d1-711f6e361168-1563962206090-store_image.jpg" alt="">
+     <div>
+         <h1>Poorti Supermarket</h1>
+         <p>Marol Military Road</p>
+     </div>
+    </div>
+
+    <div id="search">
+        <input type="text" placeholder="Search in market">
+    </div>
+
+    <div id="lowerDiv">
+        <div id="diff_cat"> 
+           <p>Fruits</p> 
+           <p>Offers</p> 
+           <p>Vegetables</p> 
+           <p>Breakfast & Dairy</p> 
+           <p>Snacks</p> 
+        </div>
+        <div id="products"></div>
+        <div id="cart">
+            <h1>Your Cart</h1>
+        </div>
+    </div>
+    
+
+    <script>
+   
+        let data = [
+    {
+      name: "Raw Papaya",
+      price: "200.00",
+      img: "https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/TnJrdHNod0kyTGxKV001MVJ6dUtxdz09-product_image.jpg",
+    },
+    {
+      name: "Pineapple",
+      price: "134.00",
+      img: "https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/ZFByRlJ1b1RnMXlORitsUkJkSWk3UT09-product_image.jpg",
+    },
+    {
+      name: "Papaya",
+      price: "99.00",
+      img: "https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/ejRHTEtlMmc3dE5QMzZJQTFISkhtZz09-product_image.jpg",
+    },
+    {
+      name: "Pomegranate Arils",
+      price: "90.00",
+      img: "https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/ZHFwZ3U5a0ZhWDllUG4wcFJVTklBdz09-product_image.jpg",
+    },
+    {
+      name: "Peeled Pomegranate",
+      price: "47.00",
+      img: "https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1615633258974_product_5d40054847ddec28ec55ba98_1.jpg",
+    },
+    {
+      name: "Papaya - Nati",
+      price: "49.00",
+      img: "https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/N25kWU81MW1zeDAxanA4RytrdklnQT09-product_image.jpg",
+    },
+    {
+      name: "Papaya - Nati",
+      price: "49.00",
+      img: "https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/N25kWU81MW1zeDAxanA4RytrdklnQT09-product_image.jpg",
+    },
+    {
+      name: "Papaya - Nati",
+      price: "49.00",
+      img: "https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/N25kWU81MW1zeDAxanA4RytrdklnQT09-product_image.jpg",
+    },
+
+  ];
+       
+        // 1. Run a foreEach loop on data and console log individual product names 
+        // 2. append this data  on DOM
+        // 3. createElement
+
+        let parent = document.getElementById("products");
+
+        function showProducts(d) {
+
+            parent.innerHTML = null;
+
+            d.forEach(function (product) {
+
+                let div = document.createElement("div");
+
+                div.classList.add("box");
+
+                let img = document.createElement("img");
+
+                img.src = product.img;
+
+                img.classList.add("box");
+
+                let product_price = document.createElement("h5");
+
+                product_price.textContent = "₹ "+product.price;
+
+                let product_name = document.createElement("h5");
+
+                product_name.textContent = product.name;
+
+                let addtocart_btn =  document.createElement("button");
+
+                addtocart_btn.classList.add("btn");
+
+                addtocart_btn.innerText = "+ ADD";
+
+                addtocart_btn.onclick = function () {
+                    addtoCart(product);              
+                  };
+
+                var divProd = document.createElement("div");
+                divProd.classList.add("details");
+                divProd.append(product_name,product_price)
+
+                  div.append(img,divProd,addtocart_btn); // HTML element
+
+                  parent.append(div);
+            });
+        }
+
+        showProducts(data)  
+        
+        
+        if (localStorage.getItem("dunzoCart") === null ) {
+            localStorage.setItem("dunzoCart",JSON.stringify([]));
+        }
+
+        function addtoCart(p) {
+             
+            let products_cart = JSON.parse(localStorage.getItem("dunzoCart"));
+
+            products_cart.push(p);
+
+            localStorage.setItem("dunzoCart",JSON.stringify(products_cart));
+
+            console.log("products_cart:",products_cart);
+
+        }        
+        
+    </script>
+
+</body>
+</html>

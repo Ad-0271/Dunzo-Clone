@@ -75,6 +75,18 @@
         color: gray;
         margin: auto 0;
       }
+
+      /* ------- */
+      #p-r-t-b > div {
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid red;
+      }
+      #p-r-t-b li {
+        margin: auto 0;
+      }
+      /* -------- */
       #p-r-m {
         padding: 5px;
         height: 35px;
@@ -133,9 +145,7 @@
             <p>From nature basket</p>
             <hr />
           </div>
-          <div id="p-r-t-b">
-            <li>Potato</li>
-          </div>
+          <div id="p-r-t-b"></div>
         </div>
         <div id="p-r-m">
           <i class="material-icons">input</i>
@@ -179,9 +189,33 @@
   // console.log(products);
 
   //Display cart in Right Panel - Start
+
+  let displayProdBox = document.getElementById(`p-r-t-b`);
+
   function cartShow() {
     products.forEach((el) => {
       console.log(el);
+
+      let div = document.createElement(`div`);
+
+      let name = document.createElement(`p`);
+      name.textContent = `◼ ` + el.name;
+
+      let count = document.createElement(`p`);
+      count.textContent = `3`;
+
+      let buttonRemove = document.createElement(`button`);
+      buttonRemove.textContent = `-`;
+
+      let buttonAdd = document.createElement(`button`);
+      buttonAdd.textContent = `+`;
+
+      let price = document.createElement(`p`);
+      price.textContent = `₹ ` + el.price;
+
+      div.append(name, buttonRemove, count, buttonAdd, price);
+
+      displayProdBox.append(div);
     });
   }
   cartShow();

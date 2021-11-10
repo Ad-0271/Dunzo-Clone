@@ -353,11 +353,12 @@
         }
 
         function addtoCart(p) {
+          console.log(p);
              
             let products_cart = JSON.parse(localStorage.getItem("dunzoCart"));
 
             products_cart.push(p);
-
+            
             localStorage.setItem("dunzoCart",JSON.stringify(products_cart));
 
             console.log("products_cart:",products_cart);

@@ -23,6 +23,8 @@
         height: 70px;
         display: flex;
         justify-content: space-between;
+        max-width: 1100px;
+        margin: auto;
       }
       #logo {
         margin: auto;
@@ -59,7 +61,6 @@
         border-radius: 10px;
       }
       #panel-l {
-        border: 1px solid pink;
         width: 70%;
         margin-left: 7%;
       }
@@ -67,25 +68,40 @@
         margin-right: 7%;
         width: 33%;
       }
+      #p-l-t {
+        margin: 0 5%;
+      }
+      #p-l-t-t {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+      }
+      #p-l-t-t p {
+        color: #00d290;
+        font-size: large;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
-    <div id="header">
-      <img
-        id="logo"
-        src="https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-4d2d81aefcf296bc100d9edc114c2ea5.png"
-      />
-      <div id="profile">
-        <i class="material-icons">person_outline</i>
-        <p>Profile</p>
+    <div style="background-color: #ffffff">
+      <div id="header">
+        <img
+          id="logo"
+          src="https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-4d2d81aefcf296bc100d9edc114c2ea5.png"
+        />
+        <div id="profile">
+          <i class="material-icons">person_outline</i>
+          <p>Profile</p>
+        </div>
       </div>
     </div>
     <div id="panels">
       <div id="panel-l">
         <div id="p-l-t">
-          <div>
+          <div id="p-l-t-t">
             <h2>Add delivery address</h2>
-            <p>CHANGE</p>
+            <p>✒ CHANGE</p>
           </div>
           <p>Choose your delivery address from address book or add new</p>
         </div>
@@ -162,7 +178,7 @@
       let div = document.createElement(`div`);
 
       let name = document.createElement(`p`);
-      name.textContent = `◼ ` + el.name;
+      name.textContent = `◾ ` + el.name;
 
       let count = document.createElement(`p`);
       count.textContent = `3`;

@@ -66,6 +66,7 @@
         border: 2px dashed gainsboro;
         color: #00d290;
         text-align: center;
+        cursor: pointer;
       }
       #p-l-t-m div:nth-child(2) {
         border: 2px solid gainsboro;
@@ -77,6 +78,16 @@
       #p-l-b-t p {
         color: #8b8f88;
         line-height: 0;
+      }
+      #p-l-b-m {
+        display: flex;
+        gap: 20px;
+      }
+      #payMethods {
+        background-color: #f3f3f5;
+      }
+      #payDisplay {
+        border: 1px dotted gainsboro;
       }
     </style>
   </head>
@@ -112,6 +123,17 @@
             <p>
               Select your payment method form the existing one or add new one
             </p>
+          </div>
+          <div id="p-l-b-m">
+            <div id="payMethods">
+              <h4>Offers for you</h4>
+              <h4>Wallets</h4>
+              <h4>Credit or Debit cards</h4>
+              <h4>UPI</h4>
+            </div>
+            <div id="payDisplay">
+              <p>Simpl</p>
+            </div>
           </div>
         </div>
       </div>

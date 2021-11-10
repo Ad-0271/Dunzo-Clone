@@ -182,22 +182,22 @@
           </div>
           <div>
             <p>Item total</p>
-            <p>908</p>
+            <p id="totalPrice"></p>
           </div>
           <hr />
           <div>
             <p>Packing</p>
-            <p>20</p>
+            <p>₹ 20</p>
           </div>
           <hr />
           <div>
             <p>Partner delivery fee</p>
-            <p>30</p>
+            <p>₹ 30</p>
           </div>
           <hr />
           <div>
             <h3>To pay</h3>
-            <h3>958</h3>
+            <h3 id="totalPriceFinal"></h3>
           </div>
         </div>
       </div>
@@ -210,11 +210,18 @@
   // console.log(products);
 
   //Display cart in Right Panel - Start
+  let showProductCount = document.getElementById(`count`);
+  let productsCount = 0;
+  let showTotalPrice = document.getElementById(`totalPrice`);
+  let totalPrice = 0;
+  let showTotalPriceFinal = document.getElementById(`totalPriceFinal`);
   let displayProdBox = document.getElementById(`p-r-t-b`);
 
   function cartShow() {
     products.forEach((el) => {
-      console.log(el);
+      // console.log(el);
+      productsCount++;
+      totalPrice += +el.price;
 
       let div = document.createElement(`div`);
 
@@ -243,4 +250,12 @@
     });
   }
   cartShow();
+  showProductCount.textContent = `( ${productsCount} Items )`;
+  showTotalPrice.textContent = `₹ ` + totalPrice;
+  showTotalPriceFinal.textContent = `₹ ` + (totalPrice + 20 + 30);
+  //Display cart in Right Panel - Start
+
+  // Left Panel Display  - Start
+
+  // Left Panel Display  - End
 </script>

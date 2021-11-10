@@ -9,41 +9,16 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link href="./CSS/checkout.css" rel="stylesheet" />
+
     <style>
-      @import url("http://fonts.cdnfonts.com/css/gilroy-bold");
-      body {
-        background-color: #f0f5f7;
-        font-family: "Gilroy-Medium", sans-serif;
-      }
-      /* -------Header Start------- */
-      #header {
-        background-color: #ffffff;
-        height: 70px;
-        display: flex;
-        justify-content: space-between;
-      }
-      #logo {
-        margin: auto;
-        height: 30px;
-        margin-left: 70px;
-        cursor: pointer;
-      }
-      .material-icons {
-        font-size: 35px;
-      }
-      #profile {
-        cursor: pointer;
-        margin: auto;
-        margin-right: 80px;
-        line-height: 0px;
-        font-size: 13px;
-      }
-      /* -------Header End------- */
       /* -------Panels Box Start------- */
       #panels {
         display: flex;
         justify-content: space-between;
         gap: 35px;
+        margin: auto;
+        max-width: 1200px;
       }
       #panel-l,
       #panel-r {
@@ -52,109 +27,126 @@
         border-radius: 10px;
       }
       #panel-l {
-        border: 1px solid pink;
         width: 70%;
         margin-left: 7%;
+        height: max-content;
       }
       #panel-r {
-        margin-right: 7%;
         width: 33%;
+        margin-right: 7%;
+        height: max-content;
       }
-      #p-r-t {
-        margin: 0 5%;
+      #p-l-t {
+        padding: 0 5% 5%;
       }
-      #p-r-t-t {
+      #p-l-t-t {
         display: flex;
         justify-content: space-between;
+        margin-top: 15px;
       }
-      #p-r-t-t p:nth-child(1) {
-        font-size: 25px;
-        font-weight: bold;
-      }
-      #p-r-t-t p:nth-child(2) {
-        color: gray;
-        margin: auto 0;
-      }
-
-      /* ------- */
-      #p-r-t-b > div {
-        font-size: 14px;
-        display: flex;
-        justify-content: space-between;
-        /* border: 1px solid red; */
-      }
-      #addRemove {
-        margin: auto;
-        display: flex;
-        border: 1px solid gainsboro;
-        height: 25px;
-        font-weight: bold;
-        border-radius: 20px;
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-      #addRemove button {
+      #p-l-t-t p {
+        color: #00d290;
+        font-size: large;
         cursor: pointer;
-        height: 25px;
-        border: none;
-        font-size: 20px;
-        background-color: white;
-        color: #00b37a;
       }
-      #addRemove button:nth-child(1) {
-        color: red;
-      }
-      #addRemove p {
-        margin: auto;
-      }
-      /* -------- */
-      #p-r-m {
-        padding: 5px;
-        height: 35px;
-        border-top: 10px solid #f0f5f7;
-        display: flex;
-        border-bottom: 10px solid #f0f5f7;
-      }
-      #p-r-m i {
-        font-size: 20px;
-        margin: auto 5%;
-        margin-right: 2px;
-      }
-      #p-r-m input {
-        /* padding-left: 10px; */
-        font-family: "Gilroy-Medium", sans-serif;
-        border: 0px solid white;
-        width: 100%;
-      }
-      #p-r-b {
-        margin: 0 5%;
-      }
-      #p-r-b i {
-        font-size: 20px;
-        margin: auto 0;
-      }
-      #p-r-b > div {
-        display: flex;
-        justify-content: space-between;
-        font-size: 14px;
+      #p-l-t > p {
+        color: #8b8f88;
+        font-size: 15px;
         line-height: 0;
       }
-      /* -------Panels Box End- ------- */
+      #p-l-t-m {
+        margin-top: 40px;
+        display: flex;
+        gap: 20px;
+      }
+      #p-l-t-m div {
+        border-radius: 10px;
+        width: 50%;
+        padding: 5%;
+      }
+      #p-l-t-m div:nth-child(1) {
+        border: 2px dashed gainsboro;
+        color: #00d290;
+        text-align: center;
+        cursor: pointer;
+      }
+      #p-l-t-m div:nth-child(2) {
+        border: 2px solid gainsboro;
+      }
+      #p-l-b {
+        padding: 0 5% 5%;
+        border-top: 10px solid #f0f5f7;
+      }
+      #p-l-b-t p {
+        color: #8b8f88;
+        line-height: 0;
+      }
+      #p-l-b-m {
+        display: flex;
+        gap: 20px;
+      }
+      #payMethods {
+        background-color: #f3f3f5;
+        width: 40%;
+      }
+      #payMethods h4 {
+        background-color: white;
+        margin: 20px;
+        margin-right: 0;
+        padding: 20px;
+      }
+      #payDisplay {
+        border: 1px dotted gainsboro;
+        width: 60%;
+      }
     </style>
   </head>
   <body>
-    <div id="header">
-      <img
-        id="logo"
-        src="https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-4d2d81aefcf296bc100d9edc114c2ea5.png"
-      />
-      <div id="profile">
-        <i class="material-icons">person_outline</i>
-        <p>Profile</p>
+    <div style="background-color: #ffffff">
+      <div id="header">
+        <img
+          id="logo"
+          src="https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-4d2d81aefcf296bc100d9edc114c2ea5.png"
+        />
+        <div id="profile">
+          <i class="material-icons">person_outline</i>
+          <p>Profile</p>
+        </div>
       </div>
     </div>
     <div id="panels">
-      <div id="panel-l"></div>
+      <div id="panel-l">
+        <div id="p-l-t">
+          <div id="p-l-t-t">
+            <h2>Add delivery address</h2>
+            <p>✒ CHANGE</p>
+          </div>
+          <p>Choose your delivery address from address book or add new</p>
+          <div id="p-l-t-m">
+            <div>ADD NEW ADDRESS</div>
+            <div>HOME</div>
+          </div>
+        </div>
+        <div id="p-l-b">
+          <div id="p-l-b-t">
+            <h2>Select payment method</h2>
+            <p>
+              Select your payment method form the existing one or add new one
+            </p>
+          </div>
+          <div id="p-l-b-m">
+            <div id="payMethods">
+              <h4>Offers for you</h4>
+              <h4>Wallets</h4>
+              <h4>Credit or Debit cards</h4>
+              <h4>UPI</h4>
+            </div>
+            <div id="payDisplay">
+              <p>Simpl</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <!--  -->
       <div id="panel-r">
         <div id="p-r-t">
@@ -226,7 +218,7 @@
       let div = document.createElement(`div`);
 
       let name = document.createElement(`p`);
-      name.textContent = `◼ ` + el.name;
+      name.textContent = `◾ ` + el.name;
 
       let count = document.createElement(`p`);
       count.textContent = `3`;

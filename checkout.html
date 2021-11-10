@@ -31,8 +31,8 @@
         margin-left: 7%;
       }
       #panel-r {
-        margin-right: 7%;
         width: 33%;
+        margin-right: 7%;
       }
       #p-l-t {
         margin: 0 5%;
@@ -46,6 +46,29 @@
         color: #00d290;
         font-size: large;
         cursor: pointer;
+      }
+      #p-l-t > p {
+        color: #8b8f88;
+        font-size: 15px;
+        line-height: 0;
+      }
+      #p-l-t-m {
+        margin-top: 40px;
+        display: flex;
+        gap: 20px;
+      }
+      #p-l-t-m div {
+        border-radius: 10px;
+        width: 50%;
+        padding: 5%;
+      }
+      #p-l-t-m div:nth-child(1) {
+        border: 2px dashed gainsboro;
+        color: #00d290;
+        text-align: center;
+      }
+      #p-l-t-m div:nth-child(2) {
+        border: 2px solid gainsboro;
       }
     </style>
   </head>
@@ -70,6 +93,10 @@
             <p>✒ CHANGE</p>
           </div>
           <p>Choose your delivery address from address book or add new</p>
+          <div id="p-l-t-m">
+            <div>ADD NEW ADDRESS</div>
+            <div>HOME</div>
+          </div>
         </div>
         <div id="p-l-b"></div>
       </div>

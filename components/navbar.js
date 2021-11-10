@@ -6,25 +6,11 @@ function navbar() {
                     <img src="https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-4d2d81aefcf296bc100d9edc114c2ea5.png" alt=""/>
                 </a>
                 <div class="svg_location_div">
-                    <div class="svg_location_box">
-                        <div class="svg_location_data">
-                            <svg viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg_location" ><path fill-rule="evenodd" clip-rule="evenodd" d="M16 10C16 14.4183 8 22 8 22C8 22 0 14.4183 0 10C0 5.58172 3.58172 2 8 2C12.4183 2 16 5.58172 16 10ZM11 10C11 11.6569 9.65685 13 8 13C6.34315 13 5 11.6569 5 10C5 8.34315 6.34315 7 8 7C9.65685 7 11 8.34315 11 10Z" fill="#00B37A"></path></svg>
-                            <p class="svg_location_paragraph">Set Location</p>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="8px" width="36px" class="sc-64ptou-0 iKjNnb jqmf1i-22 eiozVK"><path d="M12.594 4L8 8.962 3.406 4 2 5.519 8 12l6-6.481L12.594 4z" class="svg_location_drop"></path></svg>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
             <div class="header_middle">
-                <a href="#" class="header_middle_anchor">
-                    <button class="partner_button">Dunzo for Partners</button>
-                </a>
-                <div class="header_middle_business">
-                    <button class="business_button">
-                        Business with Dunzo 
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="12px" width="12px" class="sc-64ptou-0 jclYdo"><path d="M12.594 4L8 8.962 3.406 4 2 5.519 8 12l6-6.481L12.594 4z" class="business_button_svg"></path></svg>
-                    </button>
-                </div>
+               
             </div>
             <div class="header_right">
                     <a href="/search" class="search_button">
@@ -49,4 +35,3 @@ function navbar() {
   }
   
   export default navbar;
-  

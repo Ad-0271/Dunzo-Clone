@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div{
+            border: 1px solid black;
+        } */
+        #modal-container{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+        }
+        #modal-container.show{
+            opacity: 1;
+            pointer-events: auto;
+        }
+        #modal{
+            background-color: #fff;
+            width: 500px;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+        }
+        #top-section{
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: auto;
+        }
+        #close-modal{
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        img{
+            width: 100%;
+        }
+        #search-box{
+            display: flex;
+            width: 90%;
+            margin: 20px auto;
+            border: 1px solid lightseagreen;
+            border-radius: 10px;
+        }
+        #search-box > div:nth-child(1){
+            width: 40px;
+        }
+        #search-box > div:nth-child(2){
+            flex-grow: 1;
+        }
+        #area-name{
+            width: 60%;
+            height: 90%;
+            margin: auto;
+            border: 0;
+        }
+        /* #search-icon{
+            width: 20%;
+        } */
+        #current-location{
+            display: flex;
+            width: 90%;
+            margin: auto;
+        }
+        #gps-icon{
+            width: 25px;
+        }
+        h4{
+            margin: 5px 20px;
+        }
+        h2{
+            margin: 0;
+        }
+        #idle-img{
+            width: 200px;
+            height: 200px;
+            margin: 50px 150px;
+        }
+    </style>
+</head>
+<body>
+    <button id="open_modal">Open Modal</button>
+    <div id="modal-container">
+        <div id="modal">
+            <div id="top-section">
+                <div><h2>Add your location</h2></div>
+                <div id="close-modal">
+                    <img src="https://thumbs.dreamstime.com/b/basic-rgb-156262164.jpg" alt="close-modal">
+                </div>
+            </div>
+            <div id="search-box">
+                <div id="search-icon">
+                    <img src="https://static.thenounproject.com/png/3134345-200.png" alt="">
+                </div>
+                <div>
+                    <input id="area-name" type="search" placeholder="Search for an area, location name">
+                </div>
+            </div>
+            <div id="current-location">
+                <div id="gps-icon">
+                    <img src="https://icon-library.com/images/icon-gps/icon-gps-14.jpg" alt="">
+                </div>
+                <div><h4>Use current location</h4></div>
+            </div>
+            <div id="search-result">
+                <div id="idle-img">
+                    <img src="https://resources.dunzo.com/web-assets/prod/_next/static/images/partner_placeholder-f479db944bcaa4a7cc8451f617179d82.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+const open_modal = document.getElementById('open_modal');
+const modal_container  = document.getElementById('modal-container');
+const close_modal = document.getElementById('close-modal');
+
+open_modal.addEventListener('click', () => {
+    modal_container.classList.add('show');
+});
+
+close_modal.addEventListener('click', () => {
+    modal_container.classList.remove('show');
+})
+</script>

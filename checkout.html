@@ -52,13 +52,13 @@
         border-radius: 10px;
       }
       #panel-l {
-        border: 1px solid red;
+        border: 1px solid pink;
         width: 70%;
         margin-left: 7%;
       }
       #panel-r {
         margin-right: 7%;
-        width: 30%;
+        width: 33%;
       }
       #p-r-t {
         margin: 0 5%;
@@ -84,17 +84,25 @@
         /* border: 1px solid red; */
       }
       #addRemove {
+        margin: auto;
         display: flex;
-        border: 2px solid gainsboro;
-        padding: 3%;
-        height: 10px;
+        border: 1px solid gainsboro;
+        height: 25px;
+        font-weight: bold;
         border-radius: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
       }
       #addRemove button {
+        cursor: pointer;
+        height: 25px;
         border: none;
-        margin: auto;
+        font-size: 20px;
         background-color: white;
-        font-size: 25px;
+        color: #00b37a;
+      }
+      #addRemove button:nth-child(1) {
+        color: red;
       }
       #addRemove p {
         margin: auto;
@@ -152,7 +160,7 @@
         <div id="p-r-t">
           <div id="p-r-t-t">
             <p>Your Cart</p>
-            <p>(4 Items)</p>
+            <p id="count">dsfsd</p>
           </div>
           <div id="p-r-t-m">
             <p>From nature basket</p>
@@ -202,7 +210,6 @@
   // console.log(products);
 
   //Display cart in Right Panel - Start
-
   let displayProdBox = document.getElementById(`p-r-t-b`);
 
   function cartShow() {

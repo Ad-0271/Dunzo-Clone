@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/style.css">
     <title>items</title>
     <style>
-        *{
-            /* border: 1px solid black; */
-            box-sizing: border-box;
-            margin: 0px;
-            padding: 0px;
-        }
-        #Market_name{
+    
+        /* #Market_name{
             display: flex;
         }
         #Market_name img{
@@ -28,7 +25,7 @@
         }
         #search{
             margin-top: 10px;
-            /* text-align: center; */
+         
             border: 1px solid rgb(104, 102, 102)
         }
         input{
@@ -41,7 +38,7 @@
             width: 20%;
             height: 60px;
             margin-top: 15px;
-            /* float: left; */
+        
         }
         .box{
             display: flex;
@@ -63,7 +60,7 @@
         }
         #products{
             margin-left:40px;
-            /* border: 1px solid black; */
+           
             width: 450px;
         }
         #lowerDiv{
@@ -73,20 +70,158 @@
         }
         #cart{
             margin-left: 15px;
+        } */
+
+
+        /*  */
+
+    body {
+      font-family: sans-serif;
+    }
+    #location_detail {
+      width: 100%;
+      height: 200px;
+      background-color: #f7fdfa;
+     margin-top: 60px;
+    }
+    .width_content {
+      width: 55%;
+      min-height: 200px;
+      /* background-color: rgb(102, 133, 133); */
+      margin: auto;
+      margin-top: 5px;
+    }
+    #fruit_icon{
+      display:grid;
+      grid-template-columns: 12% 70%;
+      padding: 10px;
+     
+    }
+    #apple_icon{
+     
+      border-radius:10px;
+      width: 100px;
+      height: 100px;
+      background-color:#E4F9F1
+  
+    }
+    #apple_icon>div{
+      width:60%;
+      height:60%;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+
+
+    .box1{
+        display: grid;
+        grid-template-columns: 20% 65% 10%;
+        grid-column-gap: 2%;
+        margin: 5px;
+       
+    }
+   .box1:hover{
+   border: 1px solid rgb(224, 224, 224);
+   }
+    img {
+            width: 100%;
+            height: 130px;
+            /* margin-top: 15px; */
+        
         }
+        #search{
+            margin-top: 10px;
+        }
+        
+
     </style>
 </head>
 <body>
+    <header id="navbar"></header>
+    <div id="location_detail">
+        <div class="width_content">
+           
+            <p class="pt-10 	font-size: 0.75rem"> <span class="text-green-300">Home </span> > <span class="text-green-300">Mumbai</span> > Fruits & Vegetables</p>
+            
+          
+          <div id="fruit_icon">
+            <div id="apple_icon">
+              <div><img src="https://ik.imagekit.io/dunzo/icons/website/bluegreen/category/fruitsVegetables.png?tr=w-88,h-88,cm-pad_resize" alt=""></div>
+            </div>
+            <div class="ml-8">
+                <h1 class="font-bold text-2xl"> Fruits & Vegetables in Mumbai</h1>
+                <p>45 Stores</p>
+              </div>
+</div>
+</div>
+</div>
 
-    <div id="Market_name">
+<div class="width_content">
+    <div id="bottom-content" class="mt-12">
+
+    <div id="search" class="">
+      <input type="text" placeholder="Search in market">
+  </div>
+
+  <div id="lowerDiv" class="grid grid-cols-8 mt-12">
+      <div id="diff_cat" class="col-span-1"> 
+         <p class="">Fruits</p> 
+         <p class="">Offers</p> 
+         <p class="">Vegetables</p> 
+         <p class="">Breakfast & Dairy</p> 
+         <p class="">Snacks</p> 
+      </div>
+      
+    
+      <div id="products" class=" col-span-5 border border-grey-500 focus:border-red-500">
+           <div class="text-2xl bg-gray-500">Fresh Fruits</div> 
+      </div>
+      <div id="cart" class="col-span-2">
+          <h1>Your Cart</h1>
+      </div>
+  </div>
+
+
+</div>
+</div>
+
+<!-- 
+              <div id="bottom-content" class="mt-12">
+
+              <div id="search" class="">
+                <input type="text" placeholder="Search in market">
+            </div>
+        
+            <div id="lowerDiv" class="grid grid-cols-3 mt-12">
+                <div id="diff_cat" class="col-span-4"> 
+                   <p>Fruits</p> 
+                   <p>Offers</p> 
+                   <p>Vegetables</p> 
+                   <p>Breakfast & Dairy</p> 
+                   <p>Snacks</p> 
+                </div>
+                <div id="products" class="col-span-8"></div>
+                <div id="cart" class="col-span-2">
+                    <h1>Your Cart</h1>
+                </div>
+            </div>
+
+
+          </div>
+        </div> -->
+<!-- bottom -->
+
+
+    <!-- <div id="Market_name">
      <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-220,h-220,cm-pad_resize_store_thumbnail/stores/5e252a0e-ba37-4b86-a1d1-711f6e361168-1563962206090-store_image.jpg" alt="">
      <div>
          <h1>Poorti Supermarket</h1>
          <p>Marol Military Road</p>
      </div>
-    </div>
+    </div> -->
 
-    <div id="search">
+    <!-- <div id="search" class="">
         <input type="text" placeholder="Search in market">
     </div>
 
@@ -102,11 +237,17 @@
         <div id="cart">
             <h1>Your Cart</h1>
         </div>
-    </div>
+    </div> -->
     
 
-    <script>
-   
+
+
+    
+   <script type="module">
+      import navbar from "./components/navbar.js";
+  let navbar_div = document.getElementById("navbar");
+  navbar_div.innerHTML = navbar();
+
         let data = [
     {
       name: "Raw Papaya",
@@ -165,7 +306,7 @@
 
                 let div = document.createElement("div");
 
-                div.classList.add("box");
+                div.classList.add("box1");
 
                 let img = document.createElement("img");
 

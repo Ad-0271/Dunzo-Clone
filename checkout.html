@@ -52,13 +52,13 @@
         border-radius: 10px;
       }
       #panel-l {
-        border: 1px solid red;
+        border: 1px solid pink;
         width: 70%;
         margin-left: 7%;
       }
       #panel-r {
         margin-right: 7%;
-        width: 30%;
+        width: 33%;
       }
       #p-r-t {
         margin: 0 5%;
@@ -75,6 +75,39 @@
         color: gray;
         margin: auto 0;
       }
+
+      /* ------- */
+      #p-r-t-b > div {
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        /* border: 1px solid red; */
+      }
+      #addRemove {
+        margin: auto;
+        display: flex;
+        border: 1px solid gainsboro;
+        height: 25px;
+        font-weight: bold;
+        border-radius: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      #addRemove button {
+        cursor: pointer;
+        height: 25px;
+        border: none;
+        font-size: 20px;
+        background-color: white;
+        color: #00b37a;
+      }
+      #addRemove button:nth-child(1) {
+        color: red;
+      }
+      #addRemove p {
+        margin: auto;
+      }
+      /* -------- */
       #p-r-m {
         padding: 5px;
         height: 35px;
@@ -127,15 +160,13 @@
         <div id="p-r-t">
           <div id="p-r-t-t">
             <p>Your Cart</p>
-            <p>(4 Items)</p>
+            <p id="count">dsfsd</p>
           </div>
           <div id="p-r-t-m">
             <p>From nature basket</p>
             <hr />
           </div>
-          <div id="p-r-t-b">
-            <li>Potato</li>
-          </div>
+          <div id="p-r-t-b"></div>
         </div>
         <div id="p-r-m">
           <i class="material-icons">input</i>
@@ -151,26 +182,80 @@
           </div>
           <div>
             <p>Item total</p>
-            <p>908</p>
+            <p id="totalPrice"></p>
           </div>
           <hr />
           <div>
             <p>Packing</p>
-            <p>20</p>
+            <p>₹ 20</p>
           </div>
           <hr />
           <div>
             <p>Partner delivery fee</p>
-            <p>30</p>
+            <p>₹ 30</p>
           </div>
           <hr />
           <div>
             <h3>To pay</h3>
-            <h3>958</h3>
+            <h3 id="totalPriceFinal"></h3>
           </div>
         </div>
       </div>
     </div>
   </body>
 </html>
-<script></script>
+<script>
+  //Get cart details
+  let products = JSON.parse(localStorage.getItem(`dunzoCart`));
+  // console.log(products);
+
+  //Display cart in Right Panel - Start
+  let showProductCount = document.getElementById(`count`);
+  let productsCount = 0;
+  let showTotalPrice = document.getElementById(`totalPrice`);
+  let totalPrice = 0;
+  let showTotalPriceFinal = document.getElementById(`totalPriceFinal`);
+  let displayProdBox = document.getElementById(`p-r-t-b`);
+
+  function cartShow() {
+    products.forEach((el) => {
+      // console.log(el);
+      productsCount++;
+      totalPrice += +el.price;
+
+      let div = document.createElement(`div`);
+
+      let name = document.createElement(`p`);
+      name.textContent = `◼ ` + el.name;
+
+      let count = document.createElement(`p`);
+      count.textContent = `3`;
+
+      let buttonRemove = document.createElement(`button`);
+      buttonRemove.textContent = `-`;
+
+      let buttonAdd = document.createElement(`button`);
+      buttonAdd.textContent = `+`;
+
+      let addRemove = document.createElement(`div`);
+      addRemove.setAttribute(`id`, `addRemove`);
+      addRemove.append(buttonRemove, count, buttonAdd);
+
+      let price = document.createElement(`p`);
+      price.textContent = `₹ ` + el.price;
+
+      div.append(name, addRemove, price);
+
+      displayProdBox.append(div);
+    });
+  }
+  cartShow();
+  showProductCount.textContent = `( ${productsCount} Items )`;
+  showTotalPrice.textContent = `₹ ` + totalPrice;
+  showTotalPriceFinal.textContent = `₹ ` + (totalPrice + 20 + 30);
+  //Display cart in Right Panel - Start
+
+  // Left Panel Display  - Start
+
+  // Left Panel Display  - End
+</script>

@@ -217,7 +217,7 @@
     products.forEach((el) => {
       // console.log(el);
       productsCount++;
-      totalPrice += +el.price;
+      totalPrice += +el.price * el.qty;
 
       let div = document.createElement(`div`);
 
@@ -238,7 +238,7 @@
       addRemove.append(buttonRemove, count, buttonAdd);
 
       let price = document.createElement(`p`);
-      price.textContent = `₹ ` + el.price;
+      price.textContent = `₹ ` + +el.price * el.qty;
 
       div.append(name, addRemove, price);
 

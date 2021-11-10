@@ -7,6 +7,10 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="stylesheet" href="./style/style.css">
+<script
+      src="https://kit.fontawesome.com/f1eae3bf56.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header id="navbar">
@@ -30,12 +34,24 @@
             <div class="adress1">
               <p>PICKUP LOCATION</p>
               <span class="star1">*</span>
-              <input type="text" placeholder="Search pickup location" />
+              <input id="open1"  type="text" placeholder="Search pickup location" />
+              <div class="modal-container1" id="modal_container1">
+                <div class="modal1">
+                  <div><div ><i class="sc-3wfzb0-0 sc-1ojqklu-1 ixgkpK"></i><i id="close1" class="far fa-window-close"></i></div><div class="sc-10mkyz7-0 ini9h6-0 hqKsdH"><h3>Search Pickup Location</h3><div class="sc-10mkyz7-0 sc-4x77yk-3 ewPEYH"><div ><div class="sc-10mkyz7-0 sc-1yisadr-1 hrpWxe"><div><input id="places-autocomplete" name="searchText" autocomplete="off" placeholder="Search for an area, location name" class="f7phya-0 htHbFw" value=""></div></div><div class="sc-10mkyz7-0 sc-1woi3cc-0 sc-1rz86eq-0 fiUjys"><i height="18px" width="18px" class="sc-19o7men-0 bRyapc"></i><div class="sc-10mkyz7-0 sc-1rz86eq-1 dKdEhB">Select location via map</div></div></div></div></div><div ><div ><div class="sc-10mkyz7-0 abjv7w-0 Xkmny"><div class="sc-10mkyz7-0 sc-1woi3cc-0 sc-4x77yk-0 gsJWsI"><div ></div></div></div></div></div></div>
+                </div>
+              </div>
+
+
             </div>
             <div class="adress2">
               <p>DROP POINT</p>
               <span class="star2">*</span>
-              <input type="text " placeholder="Search drop location" />
+              <input type="text " id="open2" placeholder="Search drop location" />
+              <div class="modal-container2" id="modal_container2">
+                <div class="modal2">
+                  <div><div ><i class="sc-3wfzb0-0 sc-1ojqklu-1 ixgkpK"></i><i id="close2" class="far fa-window-close"></i></div><div class="sc-10mkyz7-0 ini9h6-0 hqKsdH"><h3>Search Drop Location</h3><div class="sc-10mkyz7-0 sc-4x77yk-3 ewPEYH"><div ><div class="sc-10mkyz7-0 sc-1yisadr-1 hrpWxe"><div><input id="places-autocomplete" name="searchText" autocomplete="off" placeholder="Search for an area, location name" class="f7phya-0 htHbFw" value=""></div></div><div class="sc-10mkyz7-0 sc-1woi3cc-0 sc-1rz86eq-0 fiUjys"><i height="18px" width="18px" class="sc-19o7men-0 bRyapc"></i><div class="sc-10mkyz7-0 sc-1rz86eq-1 dKdEhB">Select location via map</div></div></div></div></div><div ><div ><div class="sc-10mkyz7-0 abjv7w-0 Xkmny"><div class="sc-10mkyz7-0 sc-1woi3cc-0 sc-4x77yk-0 gsJWsI"><div ></div></div></div></div></div></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -106,5 +122,28 @@
     let navbar_div = document.getElementById("navbar");
     navbar_div.innerHTML = navbar();
   
+   let open1 = document.getElementById("open1")
+   let close1 = document.getElementById("close1")
+   let modal1 = document.getElementById("modal_container1")
    
+   open1.addEventListener("click",()=>{
+     modal1.classList.add("show")
+     console.log("hello")
+   })
+   close1.addEventListener("click",()=>{
+     modal1.classList.remove("show")
+   })
+
+
+   let open2 = document.getElementById("open2")
+   let close2 = document.getElementById("close2")
+   let modal2 = document.getElementById("modal_container2")
+   
+   open2.addEventListener("click",()=>{
+     modal2.classList.add("show")
+     console.log("hello")
+   })
+   close2.addEventListener("click",()=>{
+     modal2.classList.remove("show")
+   })
   </script>

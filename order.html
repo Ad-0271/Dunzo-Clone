@@ -26,9 +26,9 @@
         <div>
           <div class="cont1">
             <div>
+              <div id="circle1"></div>
               <div></div>
-              <div></div>
-              <div></div>
+              <div id="circle2"></div>
             </div>
           </div>
           <div class="cont2">
@@ -38,9 +38,42 @@
               <input id="open1"  type="text" placeholder="Search pickup location" />
               <div class="modal-container1" id="modal_container1">
                 <div class="modal1">
-                  <div><div ><i class="sc-3wfzb0-0 sc-1ojqklu-1 ixgkpK"></i><i id="close1" class="far fa-window-close"></i></div><div class="sc-10mkyz7-0 ini9h6-0 hqKsdH"><h3>Search Pickup Location</h3><div class="sc-10mkyz7-0 sc-4x77yk-3 ewPEYH"><div ><div class="sc-10mkyz7-0 sc-1yisadr-1 hrpWxe"><div><input id="places-autocomplete" name="searchText" autocomplete="off" placeholder="Search for an area, location name" class="f7phya-0 htHbFw" value=""></div></div><div class="sc-10mkyz7-0 sc-1woi3cc-0 sc-1rz86eq-0 fiUjys"><i height="18px" width="18px" class="sc-19o7men-0 bRyapc"></i><div class="sc-10mkyz7-0 sc-1rz86eq-1 dKdEhB">Select location via map</div></div></div></div></div><div ><div ><div class="sc-10mkyz7-0 abjv7w-0 Xkmny"><div class="sc-10mkyz7-0 sc-1woi3cc-0 sc-4x77yk-0 gsJWsI"><div ></div></div></div></div></div></div>
+                  <div><div ><i ></i></div><div><i class= "far fa-window-close close1" ></i><h3>Search Pickup Location</h3><div><div ><div ><div><input id="places-autocomplete" name="searchText" autocomplete="off" placeholder="Search for an area, location name"  value=""></div></div><div ><i height="18px" width="18px"></i><div  ><h5 id="open3" class="close1" >Select location via map</h5></div></div></div></div></div> <img src="https://resources.dunzo.com/web-assets/prod/_next/static/images/partner_placeholder-f479db944bcaa4a7cc8451f617179d82.png" alt="" title="" width="225" height="175" class="sc-1go0t46-0 eYEVdz"></div>
                 </div>
+
               </div>
+
+              <div class="modal-container3" id="modal_container3">
+                <form onsubmit="getDetails(event)" id="adress_form">
+                <div class="modal3">
+                  
+                    <div>
+                   
+                      <p  ><span >*</span> Flat, Floor, Building Name</p>
+                      <input type="text" id="af1" placeholder="eg.Second floor office" >
+                     </div>
+                     <div>
+                      <p><span >*</span> How To Reach</p>
+                      <input type="text" id="af2" placeholder="eg.Near metro station">
+                     </div>
+                     <div>
+                      <p><span>*</span> Contact Person Name</p>
+                      <input type="text" id="name" placeholder="eg.Nikhil">
+                     </div>
+                     <div>
+                      <p ><span >*</span> Contact Detail</p>
+                      <input type="text" id="phn_number" placeholder="eg.1234567890">
+                     </div>
+                     <div>
+<input type="submit" class=" close3 btn" value="Continue" >
+                     </div>
+               
+                 
+                </div>
+              </form>
+              </div>
+
+              
 
 
             </div>
@@ -50,9 +83,38 @@
               <input type="text " id="open2" placeholder="Search drop location" />
               <div class="modal-container2" id="modal_container2">
                 <div class="modal2">
-                  <div><div ><i ></i><i id="close2" class="far fa-window-close"></i></div><div ><h3>Search Drop Location</h3><div class="sc-10mkyz7-0 sc-4x77yk-3 ewPEYH"><div ><div class="sc-10mkyz7-0 sc-1yisadr-1 hrpWxe"><div><input id="places-autocomplete" name="searchText" autocomplete="off" placeholder="Search for an area, location name" class="f7phya-0 htHbFw" value=""></div></div><div ><i height="18px" width="18px" class="sc-19o7men-0 bRyapc"></i><div class="sc-10mkyz7-0 sc-1rz86eq-1 dKdEhB">Select location via map</div></div></div></div></div><div ><div ><div ><div class="sc-10mkyz7-0 sc-1woi3cc-0 sc-4x77yk-0 gsJWsI"><div ></div></div></div></div></div></div>
+                  <div><div ><i ></i><i  class="far fa-window-close close2"></i></div><div ><h3>Search Drop Location</h3><div ><div ><div ><div><input id="places-autocomplete" name="searchText" autocomplete="off" placeholder="Search for an area, location name" class="f7phya-0 htHbFw" value=""></div></div><div ><i height="18px" width="18px" ></i><div ><h5 id="open4" class="close2">Select location via map</h5></div></div></div></div></div>
+                  <img src="https://resources.dunzo.com/web-assets/prod/_next/static/images/partner_placeholder-f479db944bcaa4a7cc8451f617179d82.png" alt="" title="" width="225" height="175" class="sc-1go0t46-0 eYEVdz"></div>
                 </div>
               </div>
+
+<div class="modal-container4" id="modal_container4">
+  <form onsubmit="getDetails2(event)">
+                <div class="modal4">
+                 <div>
+                  <p  ><span >*</span> Flat, Floor, Building Name</p>
+                  <input type="text" id="adress1" placeholder="eg.Second floor office">
+                 </div>
+                 <div>
+                  <p><span >*</span> How To Reach</p>
+                  <input type="text" id="adress2" placeholder="eg.Near metro station">
+                 </div>
+                 <div>
+                  <p><span>*</span> Contact Person Name</p>
+                  <input type="text" id="name2" placeholder="eg.Nikhil">
+                 </div>
+                 <div>
+                  <p ><span >*</span> Contact Detail</p>
+                  <input type="number" id="phn_number2" maxlength="10" minlength="10" placeholder="eg.1234567890">
+                 </div>
+                 <div>
+                  <input type="submit" placeholder="continue" class="btn" id="close4" value="Continue">
+                 </div>
+                </div>
+              </form>
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -65,7 +127,7 @@
               they may report it to the law enforcement authorities.<a href="/terms" target="_blank" >Terms and Conditions</a></p>
           </div>
           <div>
-            <button >Confirm Order</button>
+            <button >Pay Now</button>
           </div>
         </div>
       </div>
@@ -124,27 +186,148 @@
     navbar_div.innerHTML = navbar();
   
    let open1 = document.getElementById("open1")
-   let close1 = document.getElementById("close1")
+   let close1 =document.querySelectorAll(".close1")
+  
    let modal1 = document.getElementById("modal_container1")
    
    open1.addEventListener("click",()=>{
      modal1.classList.add("show")
      console.log("hello")
    })
-   close1.addEventListener("click",()=>{
+   close1[0].addEventListener("click",()=>{
+     modal1.classList.remove("show")
+   })
+   close1[1].addEventListener("click",()=>{
      modal1.classList.remove("show")
    })
 
 
    let open2 = document.getElementById("open2")
-   let close2 = document.getElementById("close2")
+   let close2 = document.querySelectorAll(".close2")
    let modal2 = document.getElementById("modal_container2")
    
    open2.addEventListener("click",()=>{
      modal2.classList.add("show")
      console.log("hello")
    })
-   close2.addEventListener("click",()=>{
+   close2[0].addEventListener("click",()=>{
      modal2.classList.remove("show")
    })
+   close2[1].addEventListener("click",()=>{
+     modal2.classList.remove("show")
+   })
+
+
+
+   let open3 = document.getElementById("open3")
+   let close3 = document.querySelector(".close3")
+   let modal3 = document.getElementById("modal_container3")
+   
+   open3.addEventListener("click",()=>{
+     modal3.classList.add("show")
+     console.log("hello")
+   })
+   close3.addEventListener("click",()=>{
+     modal3.classList.remove("show")
+   })
+
+   let open4 = document.getElementById("open4")
+   let close4 = document.getElementById("close4")
+   let modal4 = document.getElementById("modal_container4")
+   
+   open4.addEventListener("click",()=>{
+     modal4.classList.add("show")
+     console.log("hello")
+   })
+   close4.addEventListener("click",()=>{
+     modal4.classList.remove("show")
+   })
+
+
+
+
+
+
+   let adressField1 = document.getElementById("af1")
+let adressField2 = document.getElementById("af2")
+let name = document.getElementById("name")
+
+let phn_number = document.getElementById("phn_number")
+let form =document.getElementById("adress_form")
+
+
+
+   
+   window.getDetails = function (e) {
+     e.preventDefault()
+    
+
+  let pickup_location = document.getElementById("open1")
+  console.log(adressField1.value)
+  pickup_location.value = adressField1.value + ",  " + adressField2.value + "    ("+ name.value + phn_number.value + ")"
+
+  let c1 = document.getElementById('circle1')
+  c1.style.backgroundColor = "rgb(0, 210, 144)"
+   }
+
+   let adress1 = document.getElementById("adress1")
+let adress2 = document.getElementById("adress2")
+let name2 = document.getElementById("name2")
+
+let phn_number2 = document.getElementById("phn_number2")
+
+window.getDetails2 = function (e) {
+     e.preventDefault()
+    
+
+  let drop_location = document.getElementById("open2")
+  console.log(adressField1.value)
+  drop_location.value = adress1.value + ",  " + adress2.value + "    ("+ name2.value + phn_number2.value + ")"
+
+
+let c2 = document.getElementById("circle2")
+
+c2.style.backgroundColor =  "rgb(0, 210, 144)"
+
+
+
+
+let box2 = document.querySelector(".box2")
+box2.style.padding = "25px"
+box2.innerHTML = null
+
+let div = document.createElement("div")
+let heading = document.createElement("h4")
+heading.textContent = "Invoice"
+let info1 = document.createElement("p")
+info1.textContent = "• Dunzo Cash cannot be used to Send Packages"
+info1.classList.add("content")
+
+let info2 = document.createElement("p")
+
+info2.textContent = "• Delivery charges may change after signing in"
+info2.classList.add("content")
+
+let x = getRandomNumberBetween(100,200)
+let payinfo1 = document.createElement("h3")
+payinfo1.textContent = "Partner delivery fee  :  "  + x
+ 
+let y = document.createElement("hr")
+let payinfo2 = document.createElement("h3")
+payinfo2.textContent = "To pay   :  " +x
+box2.append(div)
+div.append(heading,info1,info2,payinfo1,y,payinfo2)
+   }
+
+
+
+   function getRandomNumberBetween(min,max){
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+
+
+
+ 
+
   </script>

@@ -5,44 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout</title>
-    <link 
-    href="https://fonts.googleapis.com/icon?family=Material+Icons" 
-    rel="stylesheet" />
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link href="./CSS/checkout.css" rel="stylesheet" />
+
     <style>
-      @import url("http://fonts.cdnfonts.com/css/gilroy-bold");
-      body {
-        background-color: #f0f5f7;
-        font-family: "Gilroy-Medium", sans-serif;
-      }
-      /* -------Header Start------- */
-      #header {
-        background-color: #ffffff;
-        height: 70px;
-        display: flex;
-        justify-content: space-between;
-      }
-      #logo {
-        margin: auto;
-        height: 30px;
-        margin-left: 70px;
-        cursor: pointer;
-      }
-      .material-icons {
-        font-size: 35px;
-      }
-      #profile {
-        cursor: pointer;
-        margin: auto;
-        margin-right: 80px;
-        line-height: 0px;
-        font-size: 13px;
-      }
-      /* -------Header End------- */
       /* -------Panels Box Start------- */
       #panels {
         display: flex;
         justify-content: space-between;
         gap: 35px;
+        margin: auto;
+        max-width: 1200px;
       }
       #panel-l,
       #panel-r {
@@ -51,90 +31,214 @@
         border-radius: 10px;
       }
       #panel-l {
-        border: 1px solid red;
         width: 70%;
         margin-left: 7%;
+        height: max-content;
       }
       #panel-r {
+        width: 33%;
         margin-right: 7%;
-        width: 30%;
+        height: max-content;
       }
-      #p-r-t {
-        margin: 0 5%;
+      #p-l-t {
+        padding: 0 5% 5%;
       }
-      #p-r-t-t {
+      #p-l-t-t {
         display: flex;
         justify-content: space-between;
+        margin-top: 15px;
       }
-      #p-r-t-t p:nth-child(1) {
-        font-size: 25px;
-        font-weight: bold;
+      #p-l-t-t p {
+        color: #00d290;
+        font-size: large;
+        cursor: pointer;
       }
-      #p-r-t-t p:nth-child(2) {
-        color: gray;
-        margin: auto 0;
-      }
-      #p-r-m {
-        padding: 5px;
-        height: 35px;
-        border-top: 10px solid #f0f5f7;
-        display: flex;
-        border-bottom: 10px solid #f0f5f7;
-      }
-      #p-r-m i {
-        font-size: 20px;
-        margin: auto 5%;
-        margin-right: 2px;
-      }
-      #p-r-m input {
-        /* padding-left: 10px; */
-        font-family: "Gilroy-Medium", sans-serif;
-        border: 0px solid white;
-        width: 100%;
-      }
-      #p-r-b {
-        margin: 0 5%;
-      }
-      #p-r-b i {
-        font-size: 20px;
-        margin: auto 0;
-      }
-      #p-r-b > div {
-        display: flex;
-        justify-content: space-between;
-        font-size: 14px;
+      #p-l-t > p {
+        color: #8b8f88;
+        font-size: 15px;
         line-height: 0;
       }
-      /* -------Panels Box End- ------- */
+      #p-l-t-m {
+        margin-top: 40px;
+        display: flex;
+        gap: 20px;
+      }
+      #p-l-t-m div {
+        border-radius: 10px;
+        width: 50%;
+        padding: 5%;
+      }
+      #p-l-t-m div:nth-child(1) {
+        border: 2px dashed gainsboro;
+        color: #00d290;
+        text-align: center;
+        cursor: pointer;
+      }
+      #p-l-t-m div:nth-child(2) {
+        border: 2px solid gainsboro;
+      }
+      #p-l-b {
+        padding: 0 5% 5%;
+        border-top: 10px solid #f0f5f7;
+      }
+      #p-l-b-t p {
+        color: #8b8f88;
+        line-height: 0;
+      }
+      #p-l-b-m {
+        display: flex;
+        gap: 20px;
+      }
+      /* ---------------------------------------- */
+      #payMethods {
+        background-color: #f3f3f5;
+        width: 40%;
+      }
+      #payMethods h4 {
+        margin: 15px;
+        margin-right: 0;
+        padding: 20px;
+        cursor: pointer;
+      }
+      #pm1 {
+        background-color: white;
+      }
+      #payDisplay {
+        border: 2px solid gainsboro;
+        height: max-content;
+        width: 60%;
+        border-radius: 10px;
+        padding: 4%;
+        display: block;
+      }
+      #payDisplay div {
+        display: flex;
+        height: 40px;
+      }
+      #payDisplay div:nth-child(5) {
+        gap: 10px;
+      }
+      #payDisplay div h4 {
+        margin: auto 15px;
+      }
+      #payDisplay p:nth-child(2) {
+        color: purple;
+        font-size: 14px;
+      }
+      #payDisplay p:nth-child(4) {
+        color: grey;
+      }
+      #payDisplay button {
+        font-family: "Gilroy-Regular", sans-serif;
+        background-color: #00d290;
+        color: white;
+        border: none;
+        width: 45%;
+        height: 40px;
+        border-radius: 20px;
+        font-weight: bold;
+      }
+      #pd4 {
+        font-family: "Gilroy-Regular", sans-serif;
+        border: 1px solid gainsboro;
+        border-radius: 10px;
+        font-size: 14px;
+        outline: none;
+        padding-left: 10px;
+        display: none;
+      }
+      #pd4:focus {
+        border: 2px solid #00d290;
+      }
+      #payDisplay2 {
+        border: 2px dashed gainsboro;
+        height: max-content;
+        width: 60%;
+        border-radius: 10px;
+        padding: 4%;
+        color: #00d290;
+        text-align: center;
+        display: none;
+      }
     </style>
   </head>
   <body>
-    <div id="header">
-      <img
-        id="logo"
-        src="https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-4d2d81aefcf296bc100d9edc114c2ea5.png"
-      />
-      <div id="profile">
-        <i class="material-icons">person_outline</i>
-        <p>Profile</p>
+    <div style="background-color: #ffffff">
+      <div id="header">
+        <img
+          id="logo"
+          src="https://resources.dunzo.com/web-assets/prod/_next/static/images/logo-4d2d81aefcf296bc100d9edc114c2ea5.png"
+          onclick="gotoMain()"
+        />
+        <div id="profile">
+          <i class="material-icons">person_outline</i>
+          <p>Profile</p>
+        </div>
       </div>
     </div>
     <div id="panels">
-      <div id="panel-l"></div>
+      <div id="panel-l">
+        <div id="p-l-t">
+          <div id="p-l-t-t">
+            <h2>Add delivery address</h2>
+            <p>✒ CHANGE</p>
+          </div>
+          <p>Choose your delivery address from address book or add new</p>
+          <div id="p-l-t-m">
+            <div>ADD NEW ADDRESS</div>
+            <div>HOME</div>
+          </div>
+        </div>
+        <div id="p-l-b">
+          <div id="p-l-b-t">
+            <h2>Select payment method</h2>
+            <p>
+              Select your payment method form the existing one or add new one
+            </p>
+          </div>
+          <div id="p-l-b-m">
+            <div id="payMethods">
+              <h4 id="pm1">Offers for you</h4>
+              <h4 id="pm2">Wallets</h4>
+              <h4 id="pm3">Credit or Debit cards</h4>
+              <h4 id="pm4">UPI</h4>
+            </div>
+            <div id="payDisplay">
+              <div>
+                <img
+                  src="https://ik.imagekit.io/dunzo/tr:w-72,h-72,cm-pad_resize_payment_ico/icons/R4_Icons/payment/Simpl.png"
+                  id="pdimg"
+                />
+                <h4 id="pd1">Simpl</h4>
+              </div>
+              <p id="pd2">30% cashback upto Rs 60. No minimum order</p>
+              <hr />
+              <p id="pd3">
+                Your Simpl account is not linked. Please Link your Account.
+              </p>
+              <div>
+                <input type="text" placeholder="E.g rahul@icici" id="pd4" />
+                <button id="pd5">Link Account</button>
+              </div>
+            </div>
+            <div id="payDisplay2">
+              <h4>💳 ADD NEW CARD</h4>
+            </div>
+          </div>
+        </div>
+      </div>
       <!--  -->
       <div id="panel-r">
         <div id="p-r-t">
           <div id="p-r-t-t">
             <p>Your Cart</p>
-            <p>(4 Items)</p>
+            <p id="count"></p>
           </div>
           <div id="p-r-t-m">
             <p>From nature basket</p>
             <hr />
           </div>
-          <div id="p-r-t-b">
-            <li>Potato</li>
-          </div>
+          <div id="p-r-t-b"></div>
         </div>
         <div id="p-r-m">
           <i class="material-icons">input</i>
@@ -150,26 +254,161 @@
           </div>
           <div>
             <p>Item total</p>
-            <p>908</p>
+            <p id="totalPrice"></p>
           </div>
           <hr />
           <div>
             <p>Packing</p>
-            <p>20</p>
+            <p>₹ 20</p>
           </div>
           <hr />
           <div>
             <p>Partner delivery fee</p>
-            <p>30</p>
+            <p>₹ 30</p>
           </div>
           <hr />
           <div>
             <h3>To pay</h3>
-            <h3>958</h3>
+            <h3 id="totalPriceFinal"></h3>
           </div>
         </div>
       </div>
     </div>
   </body>
 </html>
-<script></script>
+<script>
+  function gotoMain() {
+    window.location.href = `index.html`;
+  }
+  //Get cart details
+  let products = JSON.parse(localStorage.getItem(`dunzoCart`));
+  // console.log(products);
+
+  //Display cart in Right Panel - START
+  let showProductCount = document.getElementById(`count`);
+  let productsCount = 0;
+  let showTotalPrice = document.getElementById(`totalPrice`);
+  let totalPrice = 0;
+  let showTotalPriceFinal = document.getElementById(`totalPriceFinal`);
+  let displayProdBox = document.getElementById(`p-r-t-b`);
+
+  function cartShow() {
+    products.forEach((el) => {
+      // console.log(el);
+      productsCount++;
+      totalPrice += +el.price;
+
+      let div = document.createElement(`div`);
+
+      let name = document.createElement(`p`);
+      name.textContent = `◾ ` + el.name;
+
+      let count = document.createElement(`p`);
+      count.textContent = `1`;
+
+      let buttonRemove = document.createElement(`button`);
+      buttonRemove.textContent = `-`;
+
+      let buttonAdd = document.createElement(`button`);
+      buttonAdd.textContent = `+`;
+
+      let addRemove = document.createElement(`div`);
+      addRemove.setAttribute(`id`, `addRemove`);
+      addRemove.append(buttonRemove, count, buttonAdd);
+
+      let price = document.createElement(`p`);
+      price.textContent = `₹ ` + el.price;
+
+      div.append(name, addRemove, price);
+
+      displayProdBox.append(div);
+    });
+  }
+  cartShow();
+  showProductCount.textContent = `( ${productsCount} Items )`;
+  showTotalPrice.textContent = `₹ ` + totalPrice;
+  showTotalPriceFinal.textContent = `₹ ` + (totalPrice + 20 + 30);
+  //Display cart in Right Panel ---- END
+
+  //Payment method -------- START
+  let pm1 = document.getElementById(`pm1`);
+  let pm2 = document.getElementById(`pm2`);
+  let pm3 = document.getElementById(`pm3`);
+  let pm4 = document.getElementById(`pm4`);
+
+  let pdimg = document.getElementById(`pdimg`);
+  let pd1 = document.getElementById(`pd1`);
+  let pd2 = document.getElementById(`pd2`);
+  let pd3 = document.getElementById(`pd3`);
+  let pd4 = document.getElementById(`pd4`);
+  let pd5 = document.getElementById(`pd5`);
+
+  let pdBox1 = document.getElementById(`payDisplay`);
+  let pdBox2 = document.getElementById(`payDisplay2`);
+
+  // 1
+  pm1.onclick = function () {
+    pm1.style.backgroundColor = `white`;
+    pm2.style.backgroundColor = `#f3f3f5`;
+    pm3.style.backgroundColor = `#f3f3f5`;
+    pm4.style.backgroundColor = `#f3f3f5`;
+
+    pdimg.src = `https://ik.imagekit.io/dunzo/tr:w-72,h-72,cm-pad_resize_payment_ico/icons/R4_Icons/payment/Simpl.png`;
+    pd1.textContent = `Simpl`;
+    pd2.textContent = `30% cashback upto Rs 60. No minimum order`;
+    pd3.textContent = `Your Simpl account is not linked. Please Link your Account.`;
+    pd4.style.display = `none`;
+    pd5.textContent = `Link Account`;
+
+    pdBox1.style.display = `block`;
+    pdBox2.style.display = `none`;
+  };
+
+  // 2
+  pm2.onclick = function () {
+    pm2.style.backgroundColor = `white`;
+    pm1.style.backgroundColor = `#f3f3f5`;
+    pm3.style.backgroundColor = `#f3f3f5`;
+    pm4.style.backgroundColor = `#f3f3f5`;
+
+    pdimg.src = `https://ik.imagekit.io/dunzo/tr:w-72,h-72,cm-pad_resize_payment_ico/icons/R4_Icons/payment/PayTM.png`;
+    pd1.textContent = `Paytm`;
+    pd2.textContent = `Upto 100 cashback, Order above 99`;
+    pd3.textContent = `Your Paytm account is not linked. Please Link your Account.`;
+    pd4.style.display = `none`;
+    pd5.textContent = `Link Account`;
+
+    pdBox1.style.display = `block`;
+    pdBox2.style.display = `none`;
+  };
+
+  // 3
+  pm3.onclick = function () {
+    pm3.style.backgroundColor = `white`;
+    pm1.style.backgroundColor = `#f3f3f5`;
+    pm2.style.backgroundColor = `#f3f3f5`;
+    pm4.style.backgroundColor = `#f3f3f5`;
+
+    pdBox1.style.display = `none`;
+    pdBox2.style.display = `block`;
+  };
+
+  // 4
+  pm4.onclick = function () {
+    pm4.style.backgroundColor = `white`;
+    pm1.style.backgroundColor = `#f3f3f5`;
+    pm2.style.backgroundColor = `#f3f3f5`;
+    pm3.style.backgroundColor = `#f3f3f5`;
+
+    pdimg.src = `https://ik.imagekit.io/dunzo/tr:w-72,h-72,cm-pad_resize_payment_ico/icons/R4_Icons/payment/UPI.png`;
+    pd1.textContent = `Add New UPI ID`;
+    pd2.textContent = null;
+    pd3.textContent = `* Enter UPI ID`;
+    pd4.style.display = `block`;
+    pd5.textContent = `Verify & Pay`;
+
+    pdBox1.style.display = `block`;
+    pdBox2.style.display = `none`;
+  };
+  //Payment method -------- END
+</script>

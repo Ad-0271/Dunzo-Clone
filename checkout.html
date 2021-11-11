@@ -85,27 +85,77 @@
         display: flex;
         gap: 20px;
       }
+      /* ---------------------------------------- */
       #payMethods {
         background-color: #f3f3f5;
         width: 40%;
       }
       #payMethods h4 {
-        background-color: white;
-        margin: 20px;
+        margin: 15px;
         margin-right: 0;
         padding: 20px;
+        cursor: pointer;
+      }
+      #pm1 {
+        background-color: white;
       }
       #payDisplay {
-        border: 1px dotted gainsboro;
+        border: 2px solid gainsboro;
+        height: max-content;
         width: 60%;
-
+        border-radius: 10px;
+        padding: 4%;
+        display: block;
+      }
+      #payDisplay div {
+        display: flex;
+        height: 40px;
+      }
+      #payDisplay div:nth-child(5) {
+        gap: 10px;
+      }
+      #payDisplay div h4 {
+        margin: auto 15px;
+      }
+      #payDisplay p:nth-child(2) {
+        color: purple;
+        font-size: 14px;
+      }
+      #payDisplay p:nth-child(4) {
+        color: grey;
+      }
+      #payDisplay button {
+        font-family: "Gilroy-Regular", sans-serif;
+        background-color: #00d290;
+        color: white;
+        border: none;
+        width: 45%;
+        height: 40px;
+        border-radius: 20px;
+        font-weight: bold;
+      }
+      #pd4 {
+        font-family: "Gilroy-Regular", sans-serif;
+        border: 1px solid gainsboro;
+        border-radius: 10px;
+        font-size: 14px;
+        outline: none;
+        padding-left: 10px;
+        display: none;
+      }
+      #pd4:focus {
+        border: 2px solid #00d290;
+      }
+      #payDisplay2 {
+        border: 2px dashed gainsboro;
+        height: max-content;
+        width: 60%;
         border-radius: 10px;
         padding: 4%;
         color: #00d290;
         text-align: center;
         display: none;
         cursor: pointer;
-
       }
     </style>
   </head>
@@ -145,13 +195,31 @@
           </div>
           <div id="p-l-b-m">
             <div id="payMethods">
-              <h4>Offers for you</h4>
-              <h4>Wallets</h4>
-              <h4>Credit or Debit cards</h4>
-              <h4>UPI</h4>
+              <h4 id="pm1">Offers for you</h4>
+              <h4 id="pm2">Wallets</h4>
+              <h4 id="pm3">Credit or Debit cards</h4>
+              <h4 id="pm4">UPI</h4>
             </div>
             <div id="payDisplay">
-              <p>Simpl</p>
+              <div>
+                <img
+                  src="https://ik.imagekit.io/dunzo/tr:w-72,h-72,cm-pad_resize_payment_ico/icons/R4_Icons/payment/Simpl.png"
+                  id="pdimg"
+                />
+                <h4 id="pd1">Simpl</h4>
+              </div>
+              <p id="pd2">30% cashback upto Rs 60. No minimum order</p>
+              <hr />
+              <p id="pd3">
+                Your Simpl account is not linked. Please Link your Account.
+              </p>
+              <div>
+                <input type="text" placeholder="E.g rahul@icici" id="pd4" />
+                <button id="pd5">Link Account</button>
+              </div>
+            </div>
+            <div id="payDisplay2">
+              <h4>💳 ADD NEW CARD</h4>
             </div>
           </div>
         </div>
@@ -213,7 +281,7 @@
   let products = JSON.parse(localStorage.getItem(`dunzoCart`));
   // console.log(products);
 
-  //Display cart in Right Panel - Start
+  //Display cart in Right Panel - START
   let showProductCount = document.getElementById(`count`);
   let productsCount = 0;
   let showTotalPrice = document.getElementById(`totalPrice`);
@@ -233,7 +301,7 @@
       name.textContent = `◾ ` + el.name;
 
       let count = document.createElement(`p`);
-      count.textContent = `3`;
+      count.textContent = `1`;
 
       let buttonRemove = document.createElement(`button`);
       buttonRemove.textContent = `-`;
@@ -257,9 +325,87 @@
   showProductCount.textContent = `( ${productsCount} Items )`;
   showTotalPrice.textContent = `₹ ` + totalPrice;
   showTotalPriceFinal.textContent = `₹ ` + (totalPrice + 20 + 30);
-  //Display cart in Right Panel - Start
+  //Display cart in Right Panel ---- END
 
-  // Left Panel Display  - Start
+  //Payment method -------- START
+  let pm1 = document.getElementById(`pm1`);
+  let pm2 = document.getElementById(`pm2`);
+  let pm3 = document.getElementById(`pm3`);
+  let pm4 = document.getElementById(`pm4`);
 
-  // Left Panel Display  - End
+  let pdimg = document.getElementById(`pdimg`);
+  let pd1 = document.getElementById(`pd1`);
+  let pd2 = document.getElementById(`pd2`);
+  let pd3 = document.getElementById(`pd3`);
+  let pd4 = document.getElementById(`pd4`);
+  let pd5 = document.getElementById(`pd5`);
+
+  let pdBox1 = document.getElementById(`payDisplay`);
+  let pdBox2 = document.getElementById(`payDisplay2`);
+
+  // 1
+  pm1.onclick = function () {
+    pm1.style.backgroundColor = `white`;
+    pm2.style.backgroundColor = `#f3f3f5`;
+    pm3.style.backgroundColor = `#f3f3f5`;
+    pm4.style.backgroundColor = `#f3f3f5`;
+
+    pdimg.src = `https://ik.imagekit.io/dunzo/tr:w-72,h-72,cm-pad_resize_payment_ico/icons/R4_Icons/payment/Simpl.png`;
+    pd1.textContent = `Simpl`;
+    pd2.textContent = `30% cashback upto Rs 60. No minimum order`;
+    pd3.textContent = `Your Simpl account is not linked. Please Link your Account.`;
+    pd4.style.display = `none`;
+    pd5.textContent = `Link Account`;
+
+    pdBox1.style.display = `block`;
+    pdBox2.style.display = `none`;
+  };
+
+  // 2
+  pm2.onclick = function () {
+    pm2.style.backgroundColor = `white`;
+    pm1.style.backgroundColor = `#f3f3f5`;
+    pm3.style.backgroundColor = `#f3f3f5`;
+    pm4.style.backgroundColor = `#f3f3f5`;
+
+    pdimg.src = `https://ik.imagekit.io/dunzo/tr:w-72,h-72,cm-pad_resize_payment_ico/icons/R4_Icons/payment/PayTM.png`;
+    pd1.textContent = `Paytm`;
+    pd2.textContent = `Upto 100 cashback, Order above 99`;
+    pd3.textContent = `Your Paytm account is not linked. Please Link your Account.`;
+    pd4.style.display = `none`;
+    pd5.textContent = `Link Account`;
+
+    pdBox1.style.display = `block`;
+    pdBox2.style.display = `none`;
+  };
+
+  // 3
+  pm3.onclick = function () {
+    pm3.style.backgroundColor = `white`;
+    pm1.style.backgroundColor = `#f3f3f5`;
+    pm2.style.backgroundColor = `#f3f3f5`;
+    pm4.style.backgroundColor = `#f3f3f5`;
+
+    pdBox1.style.display = `none`;
+    pdBox2.style.display = `block`;
+  };
+
+  // 4
+  pm4.onclick = function () {
+    pm4.style.backgroundColor = `white`;
+    pm1.style.backgroundColor = `#f3f3f5`;
+    pm2.style.backgroundColor = `#f3f3f5`;
+    pm3.style.backgroundColor = `#f3f3f5`;
+
+    pdimg.src = `https://ik.imagekit.io/dunzo/tr:w-72,h-72,cm-pad_resize_payment_ico/icons/R4_Icons/payment/UPI.png`;
+    pd1.textContent = `Add New UPI ID`;
+    pd2.textContent = null;
+    pd3.textContent = `* Enter UPI ID`;
+    pd4.style.display = `block`;
+    pd5.textContent = `Verify & Pay`;
+
+    pdBox1.style.display = `block`;
+    pdBox2.style.display = `none`;
+  };
+  //Payment method -------- END
 </script>

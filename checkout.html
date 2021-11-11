@@ -96,8 +96,33 @@
         padding: 20px;
       }
       #payDisplay {
-        border: 1px dotted gainsboro;
+        border: 2px solid gainsboro;
+        height: max-content;
         width: 60%;
+        border-radius: 10px;
+        padding: 4%;
+      }
+      #payDisplay div {
+        display: flex;
+        height: 40px;
+      }
+      #payDisplay div h4 {
+        margin: auto 15px;
+      }
+      #payDisplay p:nth-child(2) {
+        color: purple;
+        font-size: 14px;
+      }
+      #payDisplay p:nth-child(4) {
+        color: grey;
+      }
+      #payDisplay button {
+        background-color: #00d290;
+        color: white;
+        border: none;
+        width: 45%;
+        height: 40px;
+        border-radius: 20px;
       }
     </style>
   </head>
@@ -143,7 +168,16 @@
               <h4>UPI</h4>
             </div>
             <div id="payDisplay">
-              <p>Simpl</p>
+              <div>
+                <img
+                  src="https://ik.imagekit.io/dunzo/tr:w-72,h-72,cm-pad_resize_payment_ico/icons/R4_Icons/payment/Simpl.png"
+                />
+                <h4>Simpl</h4>
+              </div>
+              <p>30% cashback upto Rs 60. No minimum order</p>
+              <hr />
+              <p>Your Simpl account is not linked. Please Link your Account.</p>
+              <button>Link Account</button>
             </div>
           </div>
         </div>

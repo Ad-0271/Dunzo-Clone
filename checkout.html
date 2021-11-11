@@ -105,6 +105,7 @@
         width: 60%;
         border-radius: 10px;
         padding: 4%;
+        display: block;
       }
       #payDisplay div {
         display: flex;
@@ -144,6 +145,16 @@
       }
       #pd4:focus {
         border: 2px solid #00d290;
+      }
+      #payDisplay2 {
+        border: 2px dashed gainsboro;
+        height: max-content;
+        width: 60%;
+        border-radius: 10px;
+        padding: 4%;
+        color: #00d290;
+        text-align: center;
+        display: none;
       }
     </style>
   </head>
@@ -206,6 +217,9 @@
                 <button id="pd5">Link Account</button>
               </div>
             </div>
+            <div id="payDisplay2">
+              <h4>💳 ADD NEW CARD</h4>
+            </div>
           </div>
         </div>
       </div>
@@ -266,7 +280,7 @@
   let products = JSON.parse(localStorage.getItem(`dunzoCart`));
   // console.log(products);
 
-  //Display cart in Right Panel - Start
+  //Display cart in Right Panel - START
   let showProductCount = document.getElementById(`count`);
   let productsCount = 0;
   let showTotalPrice = document.getElementById(`totalPrice`);
@@ -310,9 +324,9 @@
   showProductCount.textContent = `( ${productsCount} Items )`;
   showTotalPrice.textContent = `₹ ` + totalPrice;
   showTotalPriceFinal.textContent = `₹ ` + (totalPrice + 20 + 30);
-  //Display cart in Right Panel - Start
+  //Display cart in Right Panel ---- END
 
-  //Payment method -------- Start
+  //Payment method -------- START
   let pm1 = document.getElementById(`pm1`);
   let pm2 = document.getElementById(`pm2`);
   let pm3 = document.getElementById(`pm3`);
@@ -324,6 +338,9 @@
   let pd3 = document.getElementById(`pd3`);
   let pd4 = document.getElementById(`pd4`);
   let pd5 = document.getElementById(`pd5`);
+
+  let pdBox1 = document.getElementById(`payDisplay`);
+  let pdBox2 = document.getElementById(`payDisplay2`);
 
   // 1
   pm1.onclick = function () {
@@ -338,6 +355,9 @@
     pd3.textContent = `Your Simpl account is not linked. Please Link your Account.`;
     pd4.style.display = `none`;
     pd5.textContent = `Link Account`;
+
+    pdBox1.style.display = `block`;
+    pdBox2.style.display = `none`;
   };
 
   // 2
@@ -353,6 +373,9 @@
     pd3.textContent = `Your Paytm account is not linked. Please Link your Account.`;
     pd4.style.display = `none`;
     pd5.textContent = `Link Account`;
+
+    pdBox1.style.display = `block`;
+    pdBox2.style.display = `none`;
   };
 
   // 3
@@ -361,6 +384,9 @@
     pm1.style.backgroundColor = `#f3f3f5`;
     pm2.style.backgroundColor = `#f3f3f5`;
     pm4.style.backgroundColor = `#f3f3f5`;
+
+    pdBox1.style.display = `none`;
+    pdBox2.style.display = `block`;
   };
 
   // 4
@@ -376,7 +402,9 @@
     pd3.textContent = `* Enter UPI ID`;
     pd4.style.display = `block`;
     pd5.textContent = `Verify & Pay`;
-  };
 
-  //Payment method -------- End
+    pdBox1.style.display = `block`;
+    pdBox2.style.display = `none`;
+  };
+  //Payment method -------- END
 </script>

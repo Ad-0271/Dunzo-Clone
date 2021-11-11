@@ -28,9 +28,42 @@ function navbar() {
                         </div>
                     </a>
                     <div class="signin">
-                        <p class="signin_button">Sign in</p>
+                        <p id="open_modal" class="signin_button ">Sign in</p>
                     </div>
             </div>
+
+
+
+           
+            <div id="modal-container">
+              <div id="modal">
+                <div id="top-section">
+                  <div id="close-modal">
+                    <img class="h-1 w-1 place-self-end"
+                      src="https://thumbs.dreamstime.com/b/basic-rgb-156262164.jpg"
+                      alt="close-modal"
+                    />
+                  </div>
+                 
+                </div>
+               
+                <h1 class="" >Sign in or Sign up</h1>
+                <p>Get started with Dunzo</p><br><br>
+                <p>Enter Your Mobile No.</p>
+                <input type="tel" placeholder="Mobile number" class="w-full border-solid border-gray-300 border" id="inpmob"></input>
+                <p id="otp"></p><br>
+                <input type="tel" placeholder="Entre OTP" class="w-full border-solid border-gray-300 border invisible " id="inpotp"></input>
+                <br><br>
+
+                <button id="btnmob" class="w-full bg-green-300">Send OTP</button>
+                <button id="btnsignin" class="w-full bg-green-300 invisible">Continue</button>
+                
+                
+              </div>
+            </div>
+
+
+
         </div>`;
   }
   

@@ -82,9 +82,10 @@
   import footer from "./components/footer.js";
   let footer_div = document.getElementById("footer");
   footer_div.innerHTML = footer();
-
-  function takeMeToMain(e) {
-    e.preventDefault();
+</script>
+<script>
+  let btn = document.getElementById(`btn`);
+  btn.onclick = function () {
     window.location.href = `index.html`;
-  }
+  };
 </script>

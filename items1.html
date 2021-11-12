@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./CSS/style.css">
     <title>items</title>
     <style>
-      .search_svg{
+      .search_svg , .business_button, .header_middle_anchor{
         display: none;
       }
     
@@ -259,41 +259,49 @@
       name: "Raw Papaya",
       price: "200.00",
       img: "https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/TnJrdHNod0kyTGxKV001MVJ6dUtxdz09-product_image.jpg",
+      qty: 1,
     },
     {
       name: "Pineapple",
       price: "134.00",
       img: "https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/ZFByRlJ1b1RnMXlORitsUkJkSWk3UT09-product_image.jpg",
+      qty: 1,
     },
     {
       name: "Papaya",
       price: "99.00",
       img: "https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/ejRHTEtlMmc3dE5QMzZJQTFISkhtZz09-product_image.jpg",
+      qty: 1,
     },
     {
       name: "Pomegranate Arils",
       price: "90.00",
       img: "https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/ZHFwZ3U5a0ZhWDllUG4wcFJVTklBdz09-product_image.jpg",
+      qty: 1,
     },
     {
       name: "Peeled Pomegranate",
       price: "47.00",
       img: "https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/1615633258974_product_5d40054847ddec28ec55ba98_1.jpg",
+      qty: 1,
     },
     {
       name: "Papaya - Nati",
       price: "49.00",
       img: "https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/N25kWU81MW1zeDAxanA4RytrdklnQT09-product_image.jpg",
+      qty: 1,
     },
     {
       name: "Papaya - Nati",
       price: "49.00",
       img: "https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/N25kWU81MW1zeDAxanA4RytrdklnQT09-product_image.jpg",
+      qty: 1,
     },
     {
       name: "Papaya - Nati",
       price: "49.00",
       img: "https://ik.imagekit.io/dunzo/tr:w-144,h-144,cm-pad_resize/N25kWU81MW1zeDAxanA4RytrdklnQT09-product_image.jpg",
+      qty: 1,
     },
 
   ];
@@ -358,12 +366,25 @@
         function addtoCart(p) {
              
             let products_cart = JSON.parse(localStorage.getItem("dunzoCart"));
+            console.log(products_cart)
 
-            products_cart.push(p);
+            let present = false;
 
-            localStorage.setItem("dunzoCart",JSON.stringify(products_cart));
+            products_cart.forEach((prod) => {
+              
+              if (prod.name === p.name){
+                prod.qty++;
+                localStorage.setItem('dunzoCart', JSON.stringify(products_cart));
+                present = true;
+                return;
+              }
+            })
 
-            console.log("products_cart:",products_cart);
+
+            if(!present){
+              products_cart.push(p);
+              localStorage.setItem('dunzoCart', JSON.stringify(products_cart))
+            }
 
         }        
         

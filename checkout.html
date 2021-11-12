@@ -76,10 +76,26 @@
         border-radius: 7px;
         font-family: "Gilroy-Regular", sans-serif;
         padding-left: 10px;
+        outline: none;
       }
       .ib {
         margin-left: 20px;
         width: 350px;
+      }
+      #finishBtn {
+        font-family: "Gilroy-Regular", sans-serif;
+        background-color: #00d290;
+        color: white;
+        border: none;
+        width: 45%;
+        height: 40px;
+        border-radius: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        margin-left: 110px;
+      }
+      #payForm input:focus {
+        border: 2px solid #00d290;
       }
     </style>
   </head>
@@ -218,9 +234,9 @@
         <input placeholder="e.g. Rahul Mishra" class="ib" />
         <div>
           <input type="checkbox" />
-          <h4>Save Card for Future transactions</h4>
+          <h4 style="margin: auto">Save Card for Future transactions</h4>
         </div>
-        <button>Add Card & Pay</button>
+        <button id="finishBtn">Add Card & Pay</button>
       </form>
     </div>
   </body>

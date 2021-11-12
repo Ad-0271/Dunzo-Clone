@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+
     <title>Document</title>
     <style>
       /* div{
@@ -88,6 +94,7 @@
         height: 200px;
         margin: 50px 150px;
       }
+
     </style>
   </head>
   <body>
@@ -102,6 +109,7 @@
               alt="close-modal"
             />
           </div>
+
         </div>
         <div id="search-box">
           <div id="search-icon">
@@ -141,6 +149,7 @@
             ></iframe
           >
         </div>
+
         <div id="search-result">
           <div id="idle-img">
             <img
@@ -159,9 +168,20 @@
   const modal_container = document.getElementById("modal-container");
   const close_modal = document.getElementById("close-modal");
 
+
+ 
+let curloc=document.getElementById("curloc");
+let mapif=document.getElementById("mapif")
+
+curloc.addEventListener("click",()=>{
+  mapif.classList.remove("invisible");
+  mapif.classList.add("visible");
+})
+
   open_modal.addEventListener("click", () => {
     modal_container.classList.add("show");
   });
+
 
   close_modal.addEventListener("click", () => {
     modal_container.classList.remove("show");

@@ -11,95 +11,7 @@
     />
     <link href="./CSS/checkout.css" rel="stylesheet" />
 
-    <style>
-      /* -------Panels Box Start------- */
-      #panels {
-        display: flex;
-        justify-content: space-between;
-        gap: 35px;
-        margin: auto;
-        max-width: 1200px;
-      }
-      #panel-l,
-      #panel-r {
-        background-color: white;
-        margin-top: 5%;
-        border-radius: 10px;
-      }
-      #panel-l {
-        width: 70%;
-        margin-left: 7%;
-        height: max-content;
-      }
-      #panel-r {
-        width: 33%;
-        margin-right: 7%;
-        height: max-content;
-      }
-      #p-l-t {
-        padding: 0 5% 5%;
-      }
-      #p-l-t-t {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 15px;
-      }
-      #p-l-t-t p {
-        color: #00d290;
-        font-size: large;
-        cursor: pointer;
-      }
-      #p-l-t > p {
-        color: #8b8f88;
-        font-size: 15px;
-        line-height: 0;
-      }
-      #p-l-t-m {
-        margin-top: 40px;
-        display: flex;
-        gap: 20px;
-      }
-      #p-l-t-m div {
-        border-radius: 10px;
-        width: 50%;
-        padding: 5%;
-      }
-      #p-l-t-m div:nth-child(1) {
-        border: 2px dashed gainsboro;
-        color: #00d290;
-        text-align: center;
-        cursor: pointer;
-      }
-      #p-l-t-m div:nth-child(2) {
-        border: 2px solid gainsboro;
-      }
-      #p-l-b {
-        padding: 0 5% 5%;
-        border-top: 10px solid #f0f5f7;
-      }
-      #p-l-b-t p {
-        color: #8b8f88;
-        line-height: 0;
-      }
-      #p-l-b-m {
-        display: flex;
-        gap: 20px;
-      }
-      #payMethods {
-        background-color: #f3f3f5;
-        width: 40%;
-      }
-      #payMethods h4 {
-        background-color: white;
-        margin: 20px;
-        margin-right: 0;
-        padding: 20px;
-      }
-      #payDisplay {
-        border: 1px dotted gainsboro;
-        width: 60%;
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <div style="background-color: #ffffff">
@@ -137,13 +49,31 @@
           </div>
           <div id="p-l-b-m">
             <div id="payMethods">
-              <h4>Offers for you</h4>
-              <h4>Wallets</h4>
-              <h4>Credit or Debit cards</h4>
-              <h4>UPI</h4>
+              <h4 id="pm1">Offers for you</h4>
+              <h4 id="pm2">Wallets</h4>
+              <h4 id="pm3">Credit or Debit cards</h4>
+              <h4 id="pm4">UPI</h4>
             </div>
             <div id="payDisplay">
-              <p>Simpl</p>
+              <div>
+                <img
+                  src="https://ik.imagekit.io/dunzo/tr:w-72,h-72,cm-pad_resize_payment_ico/icons/R4_Icons/payment/Simpl.png"
+                  id="pdimg"
+                />
+                <h4 id="pd1">Simpl</h4>
+              </div>
+              <p id="pd2">30% cashback upto Rs 60. No minimum order</p>
+              <hr />
+              <p id="pd3">
+                Your Simpl account is not linked. Please Link your Account.
+              </p>
+              <div>
+                <input type="text" placeholder="E.g rahul@icici" id="pd4" />
+                <button id="pd5">Link Account</button>
+              </div>
+            </div>
+            <div id="payDisplay2">
+              <h4>💳 ADD NEW CARD</h4>
             </div>
           </div>
         </div>
@@ -195,117 +125,38 @@
         </div>
       </div>
     </div>
+
+    <div id="payModal">
+      <form id="payForm">
+        <div>
+          <h2>Add New Card</h2>
+          <h1 id="close">&times;</h1>
+        </div>
+        <h4 class="ib">Card Number</h4>
+        <input placeholder="**** **** 1234" class="ib" />
+        <div>
+          <div>
+            <h4>Expiry Date</h4>
+            <input type="month" />
+          </div>
+          <div>
+            <h4>CVV</h4>
+            <input type="number" placeholder="e.g. 123" />
+          </div>
+        </div>
+        <h4 class="ib">Name on Card</h4>
+        <input placeholder="e.g. Rahul Mishra" class="ib" />
+        <div>
+          <input type="checkbox" />
+          <h4 style="margin: auto">Save Card for Future transactions</h4>
+        </div>
+        <button id="finishBtn" onclick="gotoThank(event)">
+          Add Card & Pay
+        </button>
+      </form>
+    </div>
   </body>
 </html>
-<script>
-  function gotoMain() {
-    window.location.href = `index.html`;
-  }
-  //Get cart details
-  // let products = JSON.parse(localStorage.getItem(`dunzoCart`));
-  // console.log(products);
 
-  //Display cart in Right Panel - Start
-  let showProductCount = document.getElementById(`count`);
-  let productsCount = 0;
-  let showTotalPrice = document.getElementById(`totalPrice`);
-  let totalPrice = 0;
-  let showTotalPriceFinal = document.getElementById(`totalPriceFinal`);
-  let displayProdBox = document.getElementById(`p-r-t-b`);
+<script src="/JS/checkout.js"></script>
 
-  function cartShow() {
-
-    // let products = JSON.parse(localStorage.getItem(`dunzoCart`));
-
-    let products = JSON.parse(localStorage.getItem('dunzoCart'));
-
-    displayProdBox.innerHTML = null;
-
-    showProductCount.textContent = `${products.length} Items`;
-
-    products.forEach((el) => {
-      // console.log(el);
-      productsCount++;
-      totalPrice += +el.price * el.qty;
-
-      let div = document.createElement(`div`);
-
-      let name = document.createElement(`p`);
-      name.textContent = `◾ ` + el.name;
-
-      let count = document.createElement(`p`);
-      count.textContent = el.qty;
-
-      let buttonRemove = document.createElement(`button`);
-      buttonRemove.textContent = `-`;
-      buttonRemove.onclick = () => {
-        removeItemFromCart(el);
-      }
-
-      let buttonAdd = document.createElement(`button`);
-      buttonAdd.textContent = `+`;
-      buttonAdd.onclick = () => {
-        addQuantityOfPoduct(el);
-      }
-
-      let addRemove = document.createElement(`div`);
-      addRemove.setAttribute(`id`, `addRemove`);
-      addRemove.append(buttonRemove, count, buttonAdd);
-
-      let price = document.createElement(`p`);
-      price.textContent = `₹ ` + +el.price * el.qty;
-
-      div.append(name, addRemove, price);
-
-      displayProdBox.append(div);
-    });
-  }
-  cartShow();
-  // showProductCount.textContent = `( ${productsCount} Items )`;
-  showTotalPrice.textContent = `₹ ` + totalPrice;
-  showTotalPriceFinal.textContent = `₹ ` + (totalPrice + 20 + 30);
-  //Display cart in Right Panel - Start
-
-  // Left Panel Display  - Start
-
-  // Left Panel Display  - End
-
-  function addQuantityOfPoduct(product){
-
-    let cart_products = JSON.parse(localStorage.getItem('dunzoCart'));
-
-    cart_products.forEach((prod) => {
-      if (prod.name === product.name){
-        prod.qty++;
-        localStorage.setItem('dunzoCart', JSON.stringify(cart_products));
-        cartShow();
-        return;
-      }
-    })
-
-  }
-
-  function removeItemFromCart(product){
-
-    let cart_products = JSON.parse(localStorage.getItem('dunzoCart'));
-
-    let indexOfProduct = -1;
-
-    for(let i = 0; i < cart_products.length; i++){
-
-      if(cart_products[i].name == product.name){
-        indexOfProduct = i;
-        break;
-      }
-    }
-
-    if (cart_products[indexOfProduct].qty > 1){
-      cart_products[indexOfProduct].qty--;
-    } else {
-      cart_products.splice(indexOfProduct, 1);
-    }
-    
-    localStorage.setItem('dunzoCart', JSON.stringify(cart_products));
-    cartShow();
-  }
-</script>

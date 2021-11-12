@@ -11,152 +11,58 @@
     />
     <link href="./CSS/checkout.css" rel="stylesheet" />
 
-    <style>
-      /* -------Panels Box Start------- */
-      #panels {
-        display: flex;
-        justify-content: space-between;
-        gap: 35px;
-        margin: auto;
-        max-width: 1200px;
-      }
-      #panel-l,
-      #panel-r {
-        background-color: white;
-        margin-top: 5%;
-        border-radius: 10px;
-      }
-      #panel-l {
-        width: 70%;
-        margin-left: 7%;
-        height: max-content;
-      }
-      #panel-r {
-        width: 33%;
-        margin-right: 7%;
-        height: max-content;
-      }
-      #p-l-t {
-        padding: 0 5% 5%;
-      }
-      #p-l-t-t {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 15px;
-      }
-      #p-l-t-t p {
-        color: #00d290;
-        font-size: large;
-        cursor: pointer;
-      }
-      #p-l-t > p {
-        color: #8b8f88;
-        font-size: 15px;
-        line-height: 0;
-      }
-      #p-l-t-m {
-        margin-top: 40px;
-        display: flex;
-        gap: 20px;
-      }
-      #p-l-t-m div {
-        border-radius: 10px;
-        width: 50%;
-        padding: 5%;
-      }
-      #p-l-t-m div:nth-child(1) {
-        border: 2px dashed gainsboro;
-        color: #00d290;
-        text-align: center;
-        cursor: pointer;
-      }
-      #p-l-t-m div:nth-child(2) {
-        border: 2px solid gainsboro;
-      }
-      #p-l-b {
-        padding: 0 5% 5%;
-        border-top: 10px solid #f0f5f7;
-      }
-      #p-l-b-t p {
-        color: #8b8f88;
-        line-height: 0;
-      }
-      #p-l-b-m {
-        display: flex;
-        gap: 20px;
-      }
-      /* ---------------------------------------- */
-      #payMethods {
-        background-color: #f3f3f5;
-        width: 40%;
-      }
-      #payMethods h4 {
-        margin: 15px;
-        margin-right: 0;
-        padding: 20px;
-        cursor: pointer;
-      }
-      #pm1 {
-        background-color: white;
-      }
-      #payDisplay {
-        border: 2px solid gainsboro;
-        height: max-content;
-        width: 60%;
-        border-radius: 10px;
-        padding: 4%;
-        display: block;
-      }
-      #payDisplay div {
-        display: flex;
-        height: 40px;
-      }
-      #payDisplay div:nth-child(5) {
-        gap: 10px;
-      }
-      #payDisplay div h4 {
-        margin: auto 15px;
-      }
-      #payDisplay p:nth-child(2) {
-        color: purple;
-        font-size: 14px;
-      }
-      #payDisplay p:nth-child(4) {
-        color: grey;
-      }
-      #payDisplay button {
-        font-family: "Gilroy-Regular", sans-serif;
-        background-color: #00d290;
-        color: white;
-        border: none;
-        width: 45%;
-        height: 40px;
-        border-radius: 20px;
-        font-weight: bold;
-      }
-      #pd4 {
-        font-family: "Gilroy-Regular", sans-serif;
-        border: 1px solid gainsboro;
-        border-radius: 10px;
-        font-size: 14px;
-        outline: none;
-        padding-left: 10px;
-        display: none;
-      }
-      #pd4:focus {
-        border: 2px solid #00d290;
-      }
-      #payDisplay2 {
-        border: 2px dashed gainsboro;
-        height: max-content;
-        width: 60%;
-        border-radius: 10px;
-        padding: 4%;
-        color: #00d290;
-        text-align: center;
-        display: none;
-        cursor: pointer;
-      }
+    <style> 
+    #payModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 10%;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0); 
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#payForm {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+#payForm > div {
+  display: flex;
+}
     </style>
   </head>
   <body>
@@ -269,6 +175,34 @@
             <h3 id="totalPriceFinal"></h3>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id="payModal">
+      <form id="payForm">
+        <div>
+          <h2>Add New Card</h2>
+          <h1 id="close">&times;</h1>
+        </div>
+        <h4>Card Number</h4>
+        <input placeholder="**** **** 1234">
+        <div>
+          <div>
+            <h4>Expiry Date</h4>
+            <input type="month">            
+          </div>
+          <div>
+            <h4>CVV</h4>
+            <input type="number" placeholder="e.g. 123">
+          </div>        
+        </div>
+        <h4>Name on Card</h4>
+        <input placeholder="e.g. Rahul Mishra">
+        <div>
+          <input type="checkbox">
+          <h4>Save Card for Future transactions</h4>
+        </div>
+        <button>Add Card & Pay</button>
       </div>
     </div>
   </body>
@@ -408,4 +342,22 @@
     pdBox2.style.display = `none`;
   };
   //Payment method -------- END
+
+  //Credit card Modal --------- START
+  let payModal = document.getElementById(`payModal`);
+  let payModalBtn = document.getElementById(`payDisplay2`)
+  var span = document.getElementById(`close`)
+  payModalBtn.onclick = function(){
+    payModal.style.display = `block`
+  }
+  span.onclick = function() {
+  payModal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == payModal) {
+    payModal.style.display = "none";
+  }
+}
+  //Credit card Modal --------- END
 </script>

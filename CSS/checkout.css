@@ -32,6 +32,152 @@ hr {
   border: 1px solid rgb(235, 235, 235);
 }
 /* -------Header End------- */
+/* -------Panels Box Start------- */
+#panels {
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+  margin: auto;
+  max-width: 1200px;
+  /* display: none; */
+}
+#panel-l,
+#panel-r {
+  background-color: white;
+  margin-top: 5%;
+  border-radius: 10px;
+}
+#panel-l {
+  width: 70%;
+  margin-left: 7%;
+  height: max-content;
+}
+#panel-r {
+  width: 33%;
+  margin-right: 7%;
+  height: max-content;
+}
+#p-l-t {
+  padding: 0 5% 5%;
+}
+#p-l-t-t {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+#p-l-t-t p {
+  color: #00d290;
+  font-size: large;
+  cursor: pointer;
+}
+#p-l-t > p {
+  color: #8b8f88;
+  font-size: 15px;
+  line-height: 0;
+}
+#p-l-t-m {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+#p-l-t-m div {
+  border-radius: 10px;
+  width: 50%;
+  padding: 5%;
+}
+#p-l-t-m div:nth-child(1) {
+  border: 2px dashed gainsboro;
+  color: #00d290;
+  text-align: center;
+  cursor: pointer;
+}
+#p-l-t-m div:nth-child(2) {
+  border: 2px solid gainsboro;
+}
+#p-l-b {
+  padding: 0 5% 5%;
+  border-top: 10px solid #f0f5f7;
+}
+#p-l-b-t p {
+  color: #8b8f88;
+  line-height: 0;
+}
+#p-l-b-m {
+  display: flex;
+  gap: 20px;
+}
+/* ---------------------------------------- */
+#payMethods {
+  background-color: #f3f3f5;
+  width: 40%;
+}
+#payMethods h4 {
+  margin: 15px;
+  margin-right: 0;
+  padding: 20px;
+  cursor: pointer;
+}
+#pm1 {
+  background-color: white;
+}
+#payDisplay {
+  border: 2px solid gainsboro;
+  height: max-content;
+  width: 60%;
+  border-radius: 10px;
+  padding: 4%;
+  display: block;
+}
+#payDisplay div {
+  display: flex;
+  height: 40px;
+}
+#payDisplay div:nth-child(5) {
+  gap: 10px;
+}
+#payDisplay div h4 {
+  margin: auto 15px;
+}
+#payDisplay p:nth-child(2) {
+  color: purple;
+  font-size: 14px;
+}
+#payDisplay p:nth-child(4) {
+  color: grey;
+}
+#payDisplay button {
+  font-family: "Gilroy-Regular", sans-serif;
+  background-color: #00d290;
+  color: white;
+  border: none;
+  width: 45%;
+  height: 40px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+#pd4 {
+  font-family: "Gilroy-Regular", sans-serif;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  padding-left: 10px;
+  display: none;
+}
+#pd4:focus {
+  border: 2px solid #00d290;
+}
+#payDisplay2 {
+  border: 2px dashed gainsboro;
+  height: max-content;
+  width: 60%;
+  border-radius: 10px;
+  padding: 4%;
+  color: #00d290;
+  text-align: center;
+  display: none;
+  cursor: pointer;
+}
 #p-r-t {
   margin: 0 5%;
 }

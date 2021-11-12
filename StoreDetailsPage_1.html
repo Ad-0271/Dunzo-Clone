@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      rel="icon"
+      href="https://softstribe.com/app/uploads/icons/com-dunzo-user-icon.jpg"
+      type="image/icon type"
+    />
+    <link
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./CSS/style.css" />
-    <title>Stores</title>
+    <title>Order From Fruits And Vegetables</title>
   </head>
   <style>
     body {
@@ -91,7 +96,7 @@
               </div>
             </div>
             <div class="ml-8">
-              <h1 class="font-bold text-2xl"> Fruits & Vegetables in Mumbai</h1>
+              <h1 class="font-bold text-2xl">Fruits & Vegetables in Mumbai</h1>
               <p>45 Stores</p>
             </div>
           </div>
@@ -105,7 +110,7 @@
         <div class="width_content">
           <div class="flex items-center space-x-1 specialmargin">
             <a
-              href="stores.html"
+              href="StoreDetailsPage_1.html"
               class="
                 flex
                 items-center
@@ -133,7 +138,7 @@
             </a>
 
             <a
-              href="stores.html"
+              href="StoreDetailsPage_1.html"
               class="
                 px-4
                 py-2
@@ -146,7 +151,7 @@
               1
             </a>
             <a
-              href="storepage1.html"
+              href="StoreDetailsPage_2.html"
               class="
                 px-4
                 py-2
@@ -159,7 +164,7 @@
               2
             </a>
             <a
-              href="storepage2.html"
+              href="StoreDetailsPage_3.html"
               class="
                 px-4
                 py-2
@@ -172,7 +177,7 @@
               3
             </a>
             <a
-              href="storepage2.html"
+              href="StoreDetailsPage_3.html"
               class="
                 px-4
                 py-2
@@ -376,7 +381,7 @@
       //   div1.style.maxHeight = "350px";
       //   div1.style.marginBottom = "80px";
       div1.onclick = function () {
-        window.location.href = "products.html";
+        window.location.href = "FruitsDetails.html";
       };
       /////style////////////////////////////////////////////////////////////////
 
@@ -429,10 +434,9 @@
   }
   showProduct();
 
-  
-      ///////////////////////////////popup//////////
+  ///////////////////////////////popup//////////
 
-      const open_modal = document.getElementById("open_modal");
+  const open_modal = document.getElementById("open_modal");
   const modal_container = document.getElementById("modal-container");
   const close_modal = document.getElementById("close-modal");
 

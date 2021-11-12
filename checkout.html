@@ -68,6 +68,18 @@
       }
       #close {
         margin-top: 0;
+        cursor: pointer;
+      }
+      #payForm input {
+        border: 1px solid gainsboro;
+        height: 40px;
+        border-radius: 7px;
+        font-family: "Gilroy-Regular", sans-serif;
+        padding-left: 10px;
+      }
+      .ib {
+        margin-left: 20px;
+        width: 350px;
       }
     </style>
   </head>
@@ -190,8 +202,8 @@
           <h2>Add New Card</h2>
           <h1 id="close">&times;</h1>
         </div>
-        <h4>Card Number</h4>
-        <input placeholder="**** **** 1234" />
+        <h4 class="ib">Card Number</h4>
+        <input placeholder="**** **** 1234" class="ib" />
         <div>
           <div>
             <h4>Expiry Date</h4>
@@ -202,8 +214,8 @@
             <input type="number" placeholder="e.g. 123" />
           </div>
         </div>
-        <h4>Name on Card</h4>
-        <input placeholder="e.g. Rahul Mishra" />
+        <h4 class="ib">Name on Card</h4>
+        <input placeholder="e.g. Rahul Mishra" class="ib" />
         <div>
           <input type="checkbox" />
           <h4>Save Card for Future transactions</h4>

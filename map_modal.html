@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
     href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
     rel="stylesheet"
   />
+
     <title>Document</title>
     <style>
       /* div{
@@ -92,7 +94,6 @@
         height: 200px;
         margin: 50px 150px;
       }
-    
 
     </style>
   </head>
@@ -108,6 +109,7 @@
               alt="close-modal"
             />
           </div>
+
         </div>
         <div id="search-box">
           <div id="search-icon">
@@ -131,9 +133,9 @@
               alt=""
             />
           </div>
-          <div><h4 id="curloc" class="">Use current location</h4></div>
+          <div><h4>Use current location</h4></div>
         </div>
-        <div style="width: 100%" class="invisible" id="mapif">
+        <div style="width: 100%">
           <iframe
             width="100%"
             height="200"
@@ -147,6 +149,7 @@
             ></iframe
           >
         </div>
+
         <div id="search-result">
           <div id="idle-img">
             <img
@@ -164,6 +167,9 @@
   const open_modal = document.getElementById("open_modal");
   const modal_container = document.getElementById("modal-container");
   const close_modal = document.getElementById("close-modal");
+
+
+ 
 let curloc=document.getElementById("curloc");
 let mapif=document.getElementById("mapif")
 
@@ -175,6 +181,7 @@ curloc.addEventListener("click",()=>{
   open_modal.addEventListener("click", () => {
     modal_container.classList.add("show");
   });
+
 
   close_modal.addEventListener("click", () => {
     modal_container.classList.remove("show");

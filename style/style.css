@@ -520,6 +520,312 @@ margin-left: 43px;
 margin-right: 68px;
 }
 
+.modal-container1{
+  background-color: rgba(0,0,0,0.3);
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+ 
+}
+.modal1{
+  background-color: #fff;
+  width: 540px;
+  max-width: 90%;
+  margin-top: 100px;
+  padding: 30px 0px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  text-align: center;
+  height: 60%;
+}
+.show{
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal-container1 h3{
+  text-align: left;
+  font-size: 20px;
+  margin-left: 55px;
+}
 
 
 
+
+
+.modal-container1 p{
+  margin-top: 30px;
+      margin-right: 364px;
+  
+  
+}
+.modal-container2{
+  background-color: rgba(0,0,0,0.3);
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  
+}
+.modal2{
+  background-color: #fff;
+  width: 540px;
+  max-width: 90%;
+  margin-top: 100px;
+  padding: 30px 0px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  text-align: center;
+  height: 60%;
+}
+.show{
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal-container2 h3{
+  text-align: left;
+  font-size: 20px;
+  margin-left: 55px;
+}
+
+.modal-container2 input{
+  width: 420px;
+    height: 40px;
+
+    
+}
+.modal-container2 p{
+  margin-top: 30px;
+      margin-right: 364px;
+  
+  
+}
+
+
+
+.modal-container3{
+  background-color: rgba(0,0,0,0.3);
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+ 
+}
+.modal3{
+  background-color: #fff;
+  width: 540px;
+  max-width: 90%;
+  margin-top: 200px;
+  /* padding: 30px 50px; */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  text-align: center;
+  height: 300px;
+}
+.show{
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal-container3 h3{
+  text-align: left;
+  font-size: 20px;
+}
+
+.modal-container3 input{
+  width: 420px;
+    height: 40px;
+
+    
+}
+.modal-container3 p{
+  margin-right: 6px;
+  
+  
+}
+.modal3 i{
+  font-size: 10px;
+}
+.modal3{
+  display: grid;
+grid-template-areas: "a b"
+                      "c d"
+                      "e e ";
+
+grid-gap: 1%;
+}
+.modal3 input{
+  width: 60%;
+}
+.modal3 button{
+  margin-left: 40px;
+  height: 90%;
+  width:60%;
+  color: white;
+  border-radius: 40px;
+  background-color: rgb(225 227 234);
+  border: none;
+  
+}
+.modal3>div:nth-child(1){
+  grid-area: a;
+}
+.modal3>div:nth-child(2){
+  grid-area: b;
+
+}
+.modal3>div:nth-child(3){
+  grid-area: c;
+ 
+}
+.modal3>div:nth-child(4){
+  grid-area: d;
+
+}
+.modal3>div:nth-child(5){
+  grid-area: e;
+
+}
+
+
+.modal-container4{
+  background-color: rgba(0,0,0,0.3);
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+ 
+}
+.modal4{
+  background-color: #fff;
+  width: 540px;
+  max-width: 90%;
+  margin-top: 200px;
+  /* padding: 30px 50px; */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  text-align: center;
+  height: 300px;
+}
+.show{
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal-container4 h3{
+  text-align: left;
+  font-size: 20px;
+}
+
+.modal-container4 input{
+  width: 420px;
+    height: 40px;
+
+    
+}
+.modal-container4 p{
+  margin-right: 6px;
+  
+  
+}
+.modal4 i{
+  font-size: 10px;
+}
+.modal4{
+  display: grid;
+grid-template-areas: "a b"
+                      "c d"
+                      "e e ";
+
+grid-gap: 1%;
+}
+.modal4 input{
+  width: 60%;
+}
+.modal4 button{
+  margin-left: 40px;
+  height: 90%;
+  width:60%;
+  color: white;
+  border-radius: 40px;
+  background-color: rgb(225 227 234);
+  border: none;
+  
+}
+.modal4>div:nth-child(1){
+  grid-area: a;
+}
+.modal4>div:nth-child(2){
+  grid-area: b;
+
+}
+.modal4>div:nth-child(3){
+  grid-area: c;
+ 
+}
+.modal4>div:nth-child(4){
+  grid-area: d;
+
+}
+.modal4>div:nth-child(5){
+  grid-area: e;
+
+}
+.btn{
+  
+height: 90%;
+width: 30%;
+
+
+border-radius: 40px;
+background-color: rgb(0, 210, 144);
+border: none;
+}
+
+
+button>a{
+  color: white;
+  text-decoration: none;
+}
+#searchbar{
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+#showcontent>p{
+  margin-top: 0px;
+  margin-right: 166px;
+}
+#searchbar2{
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+#showcontent2>p{
+  margin-top: 0px;
+  margin-right: 166px;
+}

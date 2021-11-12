@@ -236,7 +236,9 @@
           <input type="checkbox" />
           <h4 style="margin: auto">Save Card for Future transactions</h4>
         </div>
-        <button id="finishBtn" onclick="gotoThank()">Add Card & Pay</button>
+        <button id="finishBtn" onclick="gotoThank(event)">
+          Add Card & Pay
+        </button>
       </form>
     </div>
   </body>
@@ -393,8 +395,9 @@
       payModal.style.display = "none";
     }
   };
-  function gotoThank() {
-    window.location.href = `thank.html`;
+  function gotoThank(e) {
+    e.preventDefault();
+    window.location.href = `thankYou.html`;
   }
   //Credit card Modal --------- END
 </script>

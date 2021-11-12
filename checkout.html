@@ -19,6 +19,7 @@
         gap: 35px;
         margin: auto;
         max-width: 1200px;
+        display: none;
       }
       #panel-l,
       #panel-r {
@@ -157,6 +158,10 @@
         display: none;
         cursor: pointer;
       }
+      
+#payForm div{
+display: flex;
+}
     </style>
   </head>
   <body>
@@ -269,6 +274,25 @@
             <h3 id="totalPriceFinal"></h3>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id="payModal">
+      <form id="payForm">
+        <div>
+          <h2>Add New Card</h2>
+          <h2>X</h2>
+        </div>
+        <h4>Card Number</h4>
+        <input placeholder="**** **** 1234">
+        <h4>Name on Card</h4>
+        <input placeholder="e.g. Rahul Mishra">
+        <br>
+        <div>
+          <input type="checkbox">
+          <h4>Save Card for Future transactions</h4>
+        </div>
+        <button>Add Card & Pay</button>
       </div>
     </div>
   </body>
@@ -408,4 +432,8 @@
     pdBox2.style.display = `none`;
   };
   //Payment method -------- END
+
+  //Credit card Modal --------- START
+
+  //Credit card Modal --------- END
 </script>

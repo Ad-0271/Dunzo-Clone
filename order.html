@@ -38,7 +38,7 @@
               <input id="open1"  type="text" placeholder="Search pickup location" />
               <div class="modal-container1" id="modal_container1">
                 <div class="modal1">
-                  <div><div ><i ></i></div><div><i class= "far fa-window-close close1" ></i><h3>Search Pickup Location</h3><div><div ><div ><div><input id="places-autocomplete" name="searchText" autocomplete="off" placeholder="Search for an area, location name"  value=""></div></div><div ><i height="18px" width="18px"></i><div  ><h5 id="open3" class="close1" >Select location via map</h5></div></div></div></div></div> <img src="https://resources.dunzo.com/web-assets/prod/_next/static/images/partner_placeholder-f479db944bcaa4a7cc8451f617179d82.png" alt="" title="" width="225" height="175" class="sc-1go0t46-0 eYEVdz"></div>
+                  <div><div ><i ></i></div><div><i class= "far fa-window-close close1" ></i><h3>Search Pickup Location</h3><div><div ><div ><div><input id="searchbar"  name="searchText" autocomplete="off" placeholder="Search for an area, location name"  value=""></div></div><div ><i height="18px" width="18px"></i><div  ><h5 id="open3" class="close1" >Select location via map</h5></div></div></div></div></div> <div id="showcontent">  <img src="https://resources.dunzo.com/web-assets/prod/_next/static/images/partner_placeholder-f479db944bcaa4a7cc8451f617179d82.png" alt="" title="" width="225" height="175" class="sc-1go0t46-0 eYEVdz"></div></div>
                 </div>
 
               </div>
@@ -62,7 +62,7 @@
                      </div>
                      <div>
                       <p ><span >*</span> Contact Detail</p>
-                      <input type="text" id="phn_number" placeholder="eg.1234567890">
+                      <input type="number"  id="phn_number" placeholder="eg.1234567890">
                      </div>
                      <div>
 <input type="submit" class=" close3 btn" value="Continue" >
@@ -83,8 +83,8 @@
               <input type="text " id="open2" placeholder="Search drop location" />
               <div class="modal-container2" id="modal_container2">
                 <div class="modal2">
-                  <div><div ><i ></i><i  class="far fa-window-close close2"></i></div><div ><h3>Search Drop Location</h3><div ><div ><div ><div><input id="places-autocomplete" name="searchText" autocomplete="off" placeholder="Search for an area, location name" class="f7phya-0 htHbFw" value=""></div></div><div ><i height="18px" width="18px" ></i><div ><h5 id="open4" class="close2">Select location via map</h5></div></div></div></div></div>
-                  <img src="https://resources.dunzo.com/web-assets/prod/_next/static/images/partner_placeholder-f479db944bcaa4a7cc8451f617179d82.png" alt="" title="" width="225" height="175" class="sc-1go0t46-0 eYEVdz"></div>
+                  <div><div ><i ></i><i  class="far fa-window-close close2"></i></div><div ><h3>Search Drop Location</h3><div ><div ><div ><div><input id="searchbar2" name="searchText" autocomplete="off" placeholder="Search for an area, location name" class="f7phya-0 htHbFw" value=""></div></div><div ><i height="18px" width="18px" ></i><div ><h5 id="open4" class="close2">Select location via map</h5></div></div></div></div></div><div id="showcontent2"><img src="https://resources.dunzo.com/web-assets/prod/_next/static/images/partner_placeholder-f479db944bcaa4a7cc8451f617179d82.png" alt="" title="" width="225" height="175" class="sc-1go0t46-0 eYEVdz"></div>
+                  </div>
                 </div>
               </div>
 
@@ -127,7 +127,7 @@
               they may report it to the law enforcement authorities.<a href="/terms" target="_blank" >Terms and Conditions</a></p>
           </div>
           <div>
-            <button >Pay Now</button>
+           <button ><a href="order_checkout.html">Pay Now</a> </button>
           </div>
         </div>
       </div>
@@ -263,8 +263,10 @@ let form =document.getElementById("adress_form")
     
 
   let pickup_location = document.getElementById("open1")
-  console.log(adressField1.value)
-  pickup_location.value = adressField1.value + ",  " + adressField2.value + "    ("+ name.value + phn_number.value + ")"
+  
+  let pickupLocation=  adressField1.value + ",  " + adressField2.value + "    ("+ name.value +" - " + phn_number.value + ")"
+
+  pickup_location.value = pickup_location.value+ " " + pickupLocation
 
   let c1 = document.getElementById('circle1')
   c1.style.backgroundColor = "rgb(0, 210, 144)"
@@ -282,8 +284,8 @@ window.getDetails2 = function (e) {
 
   let drop_location = document.getElementById("open2")
   console.log(adressField1.value)
-  drop_location.value = adress1.value + ",  " + adress2.value + "    ("+ name2.value + phn_number2.value + ")"
-
+  let dropLocation = adress1.value + ",  " + adress2.value + "    ("+ name2.value + " - "+ "("+ phn_number2.value +")"+ ")"
+  drop_location.value= drop_location.value + " " + dropLocation
 
 let c2 = document.getElementById("circle2")
 
@@ -298,6 +300,7 @@ box2.innerHTML = null
 
 let div = document.createElement("div")
 let heading = document.createElement("h4")
+
 heading.textContent = "Invoice"
 let info1 = document.createElement("p")
 info1.textContent = "• Dunzo Cash cannot be used to Send Packages"
@@ -308,7 +311,7 @@ let info2 = document.createElement("p")
 info2.textContent = "• Delivery charges may change after signing in"
 info2.classList.add("content")
 
-let x = getRandomNumberBetween(100,200)
+var x = getRandomNumberBetween(100,200)
 let payinfo1 = document.createElement("h3")
 payinfo1.textContent = "Partner delivery fee  :  "  + x
  
@@ -317,6 +320,23 @@ let payinfo2 = document.createElement("h3")
 payinfo2.textContent = "To pay   :  " +x
 box2.append(div)
 div.append(heading,info1,info2,payinfo1,y,payinfo2)
+
+let data = {
+pickupLocation: adressField1.value + ",  " + adressField2.value + "    ("+ name.value + phn_number.value + ")",
+dropLocation:adress1.value + ",  " + adress2.value + "    ("+ name2.value + " - "+ phn_number2.value + ")",
+amount:x
+
+}
+console.log(data)
+if(localStorage.getItem("cart")===null){
+localStorage.setItem("cart",JSON.stringify([]))
+}
+
+let arr = JSON.parse(  localStorage.getItem("cart"))
+console.log(arr)
+arr.push(data)
+
+localStorage.setItem("cart",JSON.stringify(arr))
    }
 
 
@@ -325,9 +345,252 @@ div.append(heading,info1,info2,payinfo1,y,payinfo2)
     return Math.floor(Math.random()*(max-min+1)+min);
 }
 
+let data = [
+{
+    StreetAddress: "Highland Drive",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  },
+  {
+    StreetAddress: "Highland Drive",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  },
+  {
+    StreetAddress: "Devon Court",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  },
+  {
+    StreetAddress: "Cottage Street",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  },
+  {
+    StreetAddress: "Front Street North",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  },
+  {
+    StreetAddress: "Cottage Street",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  },
+  {
+    StreetAddress: "Forest Street",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  },
+  {
+    StreetAddress: "Jefferson Avenue",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  },
+  {
+    StreetAddress: "Essex Court",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  },
+  {
+    StreetAddress: "Charles Street",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  },
+  {
+    StreetAddress: "Willow Avenue",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  },
+  {
+    StreetAddress: "Briarwood Drive",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  },
+  {
+    StreetAddress: "Laurel Drive",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  },
+  {
+    StreetAddress: "Franklin Avenue",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  },
+  {
+    StreetAddress: "Route 30",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  },
+  {
+    StreetAddress: "Briarwood Drive",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  },
+  {
+    StreetAddress: "Ann Street",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  },
+  {
+    StreetAddress: "Laurel Drive",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  },
+  {
+    StreetAddress: "Summit Avenue",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  },
+  {
+    StreetAddress: "Pleasant Street",
+    Country: "India",
+    State: "Maharastra",
+    City: "Mumbai",
+    Zipcode: "121201"
+  }
+]
 
+// function showAdress(){
+  
 
+// }
 
+// showAdress()
+//pickup location
  
+let search =document.getElementById("searchbar")
+
+search.addEventListener("keyup",(e)=>{
+  var showcontent = document.getElementById("showcontent")
+showcontent.innerHTML=null
+search.style.border = "1px solid rgb(16 213 151)"
+
+  let searchString =e.target.value
+console.log(searchString)
+  let filteredchar= data.filter(chracter=>{
+    return chracter.StreetAddress.includes(searchString)
+  })
+
+  let adressList =filteredchar
+  console.log(adressList)
+ if(adressList !=""){
+  let heading = document.createElement("h5")
+  heading.style.textAlign="left"
+heading.textContent = "Search results" 
+showcontent.append(heading)
+     adressList.forEach((e)=>{
+
+    let p = document.createElement("p")
+  
+    p.textContent = e.StreetAddress + ", "+ e.Country + ", "+e.State+", "+e.City
+    p.addEventListener("click",()=>{
+      console.log(p.textContent)
+      let input1 = document.getElementById("open1")
+      input1.value = p.textContent
+    })
+    p.style.fontSize = "14px"
+    showcontent.style.height = "300px"
+    showcontent.style.overflowY = "scroll"
+    showcontent.style.marginLeft = "40px"
+    let hr = document.createElement("hr")
+
+    showcontent.append(p,hr)
+
+
+  })
+ }
+
+
+
+
+
+})
+
+//drop location
+ 
+let search2 =document.getElementById("searchbar2")
+
+search2.addEventListener("keyup",(e)=>{
+  var showcontent2 = document.getElementById("showcontent2")
+showcontent2.innerHTML=null
+search2.style.border = "1px solid rgb(16 213 151)"
+  let searchString =e.target.value
+
+  let filteredchar= data.filter(chracter=>{
+    return chracter.StreetAddress.includes(searchString)
+  })
+  let adressList =filteredchar
+  console.log(adressList)
+ if(adressList !=""){
+  let heading = document.createElement("h5")
+  heading.style.textAlign="left"
+heading.textContent = "Search results" 
+showcontent2.append(heading)
+     adressList.forEach((e)=>{
+
+    let p = document.createElement("p")
+  
+    p.textContent = e.StreetAddress + ", "+ e.Country + ", "+e.State+", "+e.City
+    p.addEventListener("click",()=>{
+      console.log(p.textContent)
+      let input1 = document.getElementById("open2")
+      input1.value = p.textContent
+    })
+    p.style.fontSize = "14px"
+    showcontent2.style.height = "300px"
+    showcontent2.style.overflowY = "scroll"
+    showcontent2.style.marginLeft = "40px"
+    let hr = document.createElement("hr")
+
+    showcontent2.append(p,hr)
+
+
+  })
+ }
+
+
+
+
+
+})
+
 
   </script>

@@ -470,6 +470,7 @@ let data = [
 // }
 
 // showAdress()
+
 //pickup location
  
 let search =document.getElementById("searchbar")
@@ -481,6 +482,7 @@ search.style.border = "1px solid rgb(16 213 151)"
 
   let searchString =e.target.value
 console.log(searchString)
+
   let filteredchar= data.filter(chracter=>{
     return chracter.StreetAddress.includes(searchString)
   })

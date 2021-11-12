@@ -25,7 +25,7 @@ function cartShow() {
     name.textContent = `◾ ` + el.name;
 
     let count = document.createElement(`p`);
-    count.textContent = `1`;
+    count.textContent = el.qty;
 
     let buttonRemove = document.createElement(`button`);
     buttonRemove.textContent = `-`;
@@ -38,7 +38,7 @@ function cartShow() {
     addRemove.append(buttonRemove, count, buttonAdd);
 
     let price = document.createElement(`p`);
-    price.textContent = `₹ ` + el.price;
+    price.textContent = `₹ ` + el.price * el.qty;
 
     div.append(name, addRemove, price);
 

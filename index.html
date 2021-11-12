@@ -5,9 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./CSS/style.css">
+
 </head>
+
+<style>
+
+
+  
+
+
+</style>
+
 <body>
+
+    
     <header id="navbar">
 
     </header>
@@ -212,8 +228,11 @@
     <footer id="footer">
 
     </footer>
+    <!-- //////////// -->
+    
+   
 </body>
-<script src="./js/script.js"></script>
+<script src="./js/pune.js"></script>
 <script type="module">
 
     import navbar from "./components/navbar.js";
@@ -223,5 +242,52 @@
       import footer from "./components/footer.js";
       let footer_div = document.getElementById("footer");
       footer_div.innerHTML = footer();
+
+
+
+
+      ///////////////////////////////popup//////////
+
+  const open_modal = document.getElementById("open_modal");
+  const modal_container = document.getElementById("modal-container");
+  const close_modal = document.getElementById("close-modal");
+  let btnmob=document.getElementById("btnmob")
+  let btnsignin=document.getElementById("btnsignin")
+  let otp=document.getElementById("otp")
+  let inpotp=document.getElementById("inpotp")
+  let inpmob=document.getElementById("inpmob")
+
+  btnmob.addEventListener("click", () => {
+      if(inpmob.value.length!=10){
+        otp.innerText="Please Enter correct number"
+      }else{
+    inpotp.classList.add("visible");
+    inpotp.classList.remove("invisible");
+    btnmob.classList.add("invisible");
+    btnsignin.classList.remove("invisible");
+    btnsignin.classList.add("visible");
+    otp.innerText=Math.floor(Math.random() * 10)+1000;
+      }
+  });
+  btnsignin.addEventListener("click", () => {
+    if(otp.innerText==inpotp.value){
+        alert("Sucessfully loged in")
+
+       // window.location.href="index.html"
+
+        open_modal.innerText="Jaidev"
+
+    }
+  });
+
+  
+
+  open_modal.addEventListener("click", () => {
+    modal_container.classList.add("show");
+  });
+
+  close_modal.addEventListener("click", () => {
+    modal_container.classList.remove("show");
+  });
     </script>
 </html>

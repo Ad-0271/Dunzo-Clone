@@ -399,29 +399,26 @@ margin-top: 100px;
   padding-bottom: 24px;
 }
 
-.adress1>p {
+.adress1 p {
   font-size: 11px;
   margin-left: 14px;
 color: rgb(62 70 94);
 
 }
-*:focus {
-  outline: none;
-}
-.adress1>input {
+.adress1 input {
   width: 90%;
   border: none;
   border-bottom: 2px solid rgb(0 210 144);
   padding-bottom: 15px;
 }
-.adress2>input {
+.adress2 input {
   width: 90%;
- 
+  color: rgb(135, 140, 155);
   border: none;
-  border-bottom: 2px solid rgb(0 210 144);
+  border-bottom: 2px solid rgb(207 209 215);
   padding-bottom: 15px;
 }
-.adress2>p {
+.adress2 p {
   font-size: 11px;
   margin-left: 14px;
   color: rgb(135, 140, 155);
@@ -432,7 +429,7 @@ color: rgb(62 70 94);
   bottom: 25px;
 
   left: 118px;
-  color: red;
+  /* color: red; */
 }
 .star2 {
   position: relative;
@@ -510,7 +507,7 @@ height: 90%;
 width: 30%;
 color: white;
 border-radius: 40px;
-background-color: rgb(0, 210, 144);
+background-color: rgb(225 227 234);
 border: none;
 /* margin-top: 15px; */
 }
@@ -522,6 +519,7 @@ line-height: 1.08;
 margin-left: 43px;
 margin-right: 68px;
 }
+
 .modal-container1{
   background-color: rgba(0,0,0,0.3);
   position: fixed;
@@ -558,12 +556,10 @@ margin-right: 68px;
   margin-left: 55px;
 }
 
-.modal-container1 input{
-  width: 420px;
-    height: 40px;
 
-    
-}
+
+
+
 .modal-container1 p{
   margin-top: 30px;
       margin-right: 364px;
@@ -811,6 +807,7 @@ border-radius: 40px;
 background-color: rgb(0, 210, 144);
 border: none;
 }
+
 
 button>a{
   color: white;

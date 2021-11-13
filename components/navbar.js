@@ -7,7 +7,7 @@ function navbar() {
                 </a>
                 <div class="svg_location_div">
                 <div class="svg_location_box">
-                <div class="svg_location_data">
+                <div class="svg_location_data" id="open-map-modal">
                     <svg viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg_location" ><path fill-rule="evenodd" clip-rule="evenodd" d="M16 10C16 14.4183 8 22 8 22C8 22 0 14.4183 0 10C0 5.58172 3.58172 2 8 2C12.4183 2 16 5.58172 16 10ZM11 10C11 11.6569 9.65685 13 8 13C6.34315 13 5 11.6569 5 10C5 8.34315 6.34315 7 8 7C9.65685 7 11 8.34315 11 10Z" fill="#00B37A"></path></svg>
                     <p class="svg_location_paragraph">Set Location</p>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" height="8px" width="36px" class="sc-64ptou-0 iKjNnb jqmf1i-22 eiozVK"><path d="M12.594 4L8 8.962 3.406 4 2 5.519 8 12l6-6.481L12.594 4z" class="svg_location_drop"></path></svg>
@@ -78,6 +78,67 @@ function navbar() {
 
 
 
+        </div>
+        <div id="map-modal-container">
+            <div id="map-modal">
+                <div id="map-top-section">
+                <div><h2>Add your location</h2></div>
+                <div id="map-close-modal">
+                    <img
+                    src="https://thumbs.dreamstime.com/b/basic-rgb-156262164.jpg"
+                    alt="close-modal"
+                    />
+                </div>
+
+                </div>
+                <div id="search-box">
+                <div id="search-icon">
+                    <img
+                    src="https://static.thenounproject.com/png/3134345-200.png"
+                    alt=""
+                    />
+                </div>
+                <div>
+                    <input
+                    id="area-name"
+                    type="search"
+                    placeholder="Search for an area, location name"
+                    />
+                </div>
+                </div>
+                <div id="current-location">
+                <div id="gps-icon">
+                    <img
+                    src="https://icon-library.com/images/icon-gps/icon-gps-14.jpg"
+                    alt=""
+                    />
+                </div>
+                <div><h4>Use current location</h4></div>
+                </div>
+                <div style="width: 100%">
+                <iframe
+                    width="100%"
+                    height="200"
+                    frameborder="0"
+                    scrolling="no"
+                    marginheight="0"
+                    marginwidth="0"
+                    src="https://maps.google.com/maps?width=100%25&amp;height=200&amp;hl=en&amp;q=pune+(Your%20Business%20Name)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                    ><a href="https://www.mapsdirections.info/en/measure-map-radius/"
+                    >Radius distance map</a
+                    ></iframe
+                >
+                </div>
+
+                <div id="search-result">
+                <div id="idle-img">
+                    <!-- <img
+                    src="https://resources.dunzo.com/web-assets/prod/_next/static/images/partner_placeholder-f479db944bcaa4a7cc8451f617179d82.png"
+                    alt=""
+                    /> -->
+                </div>
+                </div>
+            </div>
         </div>`;
   }
   

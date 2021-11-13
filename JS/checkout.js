@@ -19,6 +19,7 @@ function cartShow() {
     let div = document.createElement(`div`);
 
     let name = document.createElement(`p`);
+    name.setAttribute(`id`, `nameIndividual`);
     name.textContent = `◾ ` + el.name;
 
     let count = document.createElement(`p`);
@@ -42,6 +43,7 @@ function cartShow() {
     addRemove.append(buttonRemove, count, buttonAdd);
 
     let price = document.createElement(`p`);
+    price.setAttribute(`id`, `priceIndividual`);
     price.textContent = `₹ ` + el.price * el.qty;
     totalPrice += +(el.price * el.qty);
 

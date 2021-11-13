@@ -377,5 +377,20 @@
     close_modal.addEventListener("click", () => {
       modal_container.classList.remove("show");
     });
+
+    // Map-modal-Popup
+    const open_map_modal = document.getElementById("open-map-modal");
+    const map_modal_container = document.getElementById("map-modal-container");
+    const close_map_modal = document.getElementById("map-close-modal");
+
+    open_map_modal.addEventListener("click", () => {
+    map_modal_container.classList.add("show");
+
+  });
+
+
+  close_map_modal.addEventListener("click", () => {
+    map_modal_container.classList.remove("show");
+  });
   </script>
 </html>

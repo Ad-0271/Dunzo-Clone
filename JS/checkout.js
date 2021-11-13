@@ -149,10 +149,6 @@ window.onclick = function (event) {
     payModal.style.display = "none";
   }
 };
-function gotoThank(e) {
-  e.preventDefault();
-  // window.location.href = `thankYou.html`;
-}
 //Credit card Modal --------- END
 
 //Credit Card Validations -------- START

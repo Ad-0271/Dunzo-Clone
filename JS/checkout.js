@@ -151,6 +151,40 @@ window.onclick = function (event) {
 };
 function gotoThank(e) {
   e.preventDefault();
-  window.location.href = `thankYou.html`;
+  // window.location.href = `thankYou.html`;
 }
 //Credit card Modal --------- END
+
+//Credit Card Validations -------- START
+let form_details = document.getElementById(`payForm`);
+let warning = document.getElementById(`warning`);
+let finishBtn = document.getElementById(`finishBtn`);
+
+finishBtn.addEventListener(`click`, function (e) {
+  e.preventDefault();
+  var validation_emptyFields = 0;
+  var validation_Number = 0;
+  var validation_CVV = 0;
+  for (let i = 0; i < form_details.length - 1; i++) {
+    if (form_details[i].value == `` || form_details[i].value == null) {
+      validation_emptyFields++;
+    }
+  }
+  if (form_details[0].value.length != 16) {
+    validation_Number++;
+  }
+  if (form_details[2].value.length != 3) {
+    validation_CVV++;
+  }
+
+  if (validation_emptyFields > 0) {
+    warning.textContent = `* One or more fields are empty`;
+  } else if (validation_Number > 0) {
+    warning.textContent = `* Enter a valid 16-digit card number`;
+  } else if (validation_CVV > 0) {
+    warning.textContent = `* CVV is the unique 3 dight number at the back of your card`;
+  } else {
+    window.location.href = `thankYou.html`;
+  }
+});
+//Credit Card Validations -------- END

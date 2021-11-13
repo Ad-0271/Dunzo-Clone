@@ -3,7 +3,7 @@ body {
   background-color: #f0f5f7;
   font-family: "Gilroy-Regular", sans-serif;
 }
-a{
+a {
   text-decoration: none;
 }
 /* -------Header Start------- */
@@ -263,7 +263,7 @@ hr {
 /* -------Panels Box End- ------- */
 
 #payModal {
-  display: none;
+  /* display: none; */
   position: fixed;
   z-index: 1;
   padding-top: 10%;
@@ -345,4 +345,9 @@ hr {
 }
 #payForm input:focus {
   border: 2px solid #00d290;
+}
+#warning {
+  margin: 15px 20px;
+  color: red;
+  font-size: 14px;
 }

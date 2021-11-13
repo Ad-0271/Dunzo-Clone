@@ -7,8 +7,13 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="stylesheet" href="./style/style.css">
+<script
+      src="https://kit.fontawesome.com/f1eae3bf56.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
+
     <header id="navbar">
      
     </header>
@@ -21,16 +26,15 @@
         <div>
           <div class="cont1">
             <div>
+              <div id="circle1"></div>
               <div></div>
-              <div></div>
-              <div></div>
+              <div id="circle2"></div>
             </div>
           </div>
           <div class="cont2">
             <div class="adress1">
               <p>PICKUP LOCATION</p>
               <span class="star1">*</span>
-
               <input id="open1"  type="text" placeholder="Search pickup location" />
               <div class="modal-container1" id="modal_container1">
                 <div class="modal1">
@@ -72,14 +76,10 @@
               
 
 
-
-              <input type="text" placeholder="Search pickup location" />
-
             </div>
             <div class="adress2">
               <p>DROP POINT</p>
               <span class="star2">*</span>
-
               <input type="text " id="open2" placeholder="Search drop location" />
               <div class="modal-container2" id="modal_container2">
                 <div class="modal2">
@@ -115,9 +115,6 @@
               </div>
 
 
-
-              <input type="text " placeholder="Search drop location" />
-
             </div>
           </div>
         </div>
@@ -126,14 +123,11 @@
             <input type="text" name="instructions" autocomplete="off" value="" disabled="" placeholder="Any instructions for the delivery partner?" class="">
           </div>
           <div class="mid">
-            <p class="sc-1gu8y64-0 eZLYCO qbo5gq-9 gbWHiw">By confirming I accept this order doesn’t contain illegal/resticted items, if illegal/restricted items are found by Dunzo Partner, 
-              they may report it to the law enforcement authorities.<a href="/terms" target="_blank" class="jxbqi7-0 qbo5gq-10 gnGJJT">Terms and Conditions</a></p>
+            <p>By confirming I accept this order doesn’t contain illegal/resticted items, if illegal/restricted items are found by Dunzo Partner, 
+              they may report it to the law enforcement authorities.<a href="/terms" target="_blank" >Terms and Conditions</a></p>
           </div>
           <div>
-
            <button ><a href="order_checkout.html">Pay Now</a> </button>
-
-
           </div>
         </div>
       </div>
@@ -149,7 +143,7 @@
         </div>
         <div>
           <span class="heading"
-            >Package Weight<!-- -->
+            >Package Weight
             - </span
           ><span class="content"
             >We cannot deliver items that can’t be easily carried on bike</span
@@ -157,7 +151,7 @@
         </div>
         <div>
           <span class="heading">
-            No Autos/Cabs<!-- -->
+            No Autos/Cabs
             - </span
           ><span class="content"
             >We will not be able to get something transported via these</span
@@ -165,7 +159,7 @@
         </div>
         <div>
           <span class="heading">
-            Restricted/Illegal Item<!-- -->
+            Restricted/Illegal Item
             - </span
           ><span class="content"
             >Please don’t hand over any restricted item</span
@@ -191,7 +185,27 @@
     let navbar_div = document.getElementById("navbar");
     navbar_div.innerHTML = navbar();
   
+   let open1 = document.getElementById("open1")
+   let close1 =document.querySelectorAll(".close1")
+  
+   let modal1 = document.getElementById("modal_container1")
+   
+   open1.addEventListener("click",()=>{
+     modal1.classList.add("show")
+     console.log("hello")
+   })
+   close1[0].addEventListener("click",()=>{
+     modal1.classList.remove("show")
+   })
+   close1[1].addEventListener("click",()=>{
+     modal1.classList.remove("show")
+   })
 
+
+   let open2 = document.getElementById("open2")
+   let close2 = document.querySelectorAll(".close2")
+   let modal2 = document.getElementById("modal_container2")
+   
    open2.addEventListener("click",()=>{
      modal2.classList.add("show")
      console.log("hello")
@@ -555,7 +569,6 @@ showcontent2.append(heading)
 
 
 })
-
 
 
   </script>

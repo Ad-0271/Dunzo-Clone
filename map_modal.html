@@ -34,7 +34,7 @@
       #modal {
         background-color: #fff;
         width: 500px;
-        height: 500px;
+        height: 600px;
         border-radius: 10px;
         padding: 20px;
         margin: 20px;
@@ -152,10 +152,10 @@
 
         <div id="search-result">
           <div id="idle-img">
-            <img
+            <!-- <img
               src="https://resources.dunzo.com/web-assets/prod/_next/static/images/partner_placeholder-f479db944bcaa4a7cc8451f617179d82.png"
               alt=""
-            />
+            /> -->
           </div>
         </div>
       </div>
@@ -173,13 +173,14 @@
 let curloc=document.getElementById("curloc");
 let mapif=document.getElementById("mapif")
 
-curloc.addEventListener("click",()=>{
-  mapif.classList.remove("invisible");
-  mapif.classList.add("visible");
-})
+// curloc.addEventListener("click",()=>{
+//   mapif.classList.remove("invisible");
+//   mapif.classList.add("visible");
+// })
 
   open_modal.addEventListener("click", () => {
     modal_container.classList.add("show");
+
   });
 
 

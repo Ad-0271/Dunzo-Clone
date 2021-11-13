@@ -325,6 +325,11 @@
 
     ///////////////////////////////popup//////////
 
+    if(localStorage.getItem('dunzoUser') == null){
+      localStorage.setItem('dunzoUser', JSON.stringify([]));
+    };
+    
+
     const open_modal = document.getElementById("open_modal");
     const modal_container = document.getElementById("modal-container");
     const close_modal = document.getElementById("close-modal");
@@ -334,6 +339,11 @@
     let inpotp = document.getElementById("inpotp");
     let inpmob = document.getElementById("inpmob");
 
+    let dunzoUser = JSON.parse(localStorage.getItem('dunzoUser'));
+
+    if(!dunzoUser.length){
+
+    
     btnmob.addEventListener("click", () => {
       if (inpmob.value.length != 10) {
         otp.innerText = "Please Enter correct number";
@@ -351,9 +361,15 @@
         alert("Sucessfully loged in");
         // window.location.href="index.html"
         open_modal.innerText = "Jaidev";
+        let user = {name: 'Jaidev'};
+        dunzoUser.push(user);
+        localStorage.setItem('dunzoUser', JSON.stringify(dunzoUser));
       }
     });
 
+  } else {
+    open_modal.innerText = dunzoUser[0].name;
+  }
     open_modal.addEventListener("click", () => {
       modal_container.classList.add("show");
     });

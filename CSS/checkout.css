@@ -204,6 +204,7 @@ hr {
   justify-content: space-between;
   /* border: 1px solid red; */
 }
+
 #addRemove {
   margin: auto;
   display: flex;
@@ -227,6 +228,15 @@ hr {
 }
 #addRemove p {
   margin: auto;
+}
+#priceIndividual {
+  margin: auto;
+  width: 55px;
+  margin-right: 1px;
+  text-align: center;
+}
+#nameIndividual {
+  width: 150px;
 }
 /* -------- */
 #p-r-m {

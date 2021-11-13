@@ -3,6 +3,9 @@ body {
   background-color: #f0f5f7;
   font-family: "Gilroy-Regular", sans-serif;
 }
+a{
+  text-decoration: none;
+}
 /* -------Header Start------- */
 #header {
   background-color: #ffffff;

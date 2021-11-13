@@ -415,4 +415,24 @@ div.style.gridTemplateColumns="50% 50%"
     });
   }
   showCartProducts();
+
+  // Pop-up
+  
+  const open_modal = document.getElementById("open_modal");
+  const modal_container = document.getElementById("modal-container");
+  const close_modal = document.getElementById("close-modal");
+
+  let dunzoUser = JSON.parse(localStorage.getItem('dunzoUser'));
+
+  if(dunzoUser.length){
+    open_modal.innerText = dunzoUser[0].name;
+  }
+
+  open_modal.addEventListener("click", () => {
+    modal_container.classList.add("show");
+  });
+
+  close_modal.addEventListener("click", () => {
+    modal_container.classList.remove("show");
+  });
 </script>

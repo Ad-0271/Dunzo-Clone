@@ -15,7 +15,7 @@
       /* div{
             border: 1px solid black;
         } */
-      #modal-container {
+      #map-modal-container {
         position: fixed;
         top: 0;
         left: 0;
@@ -27,25 +27,25 @@
         display: flex;
         justify-content: center;
       }
-      #modal-container.show {
+      #map-modal-container.show {
         opacity: 1;
         pointer-events: auto;
       }
-      #modal {
+      #map-modal {
         background-color: #fff;
         width: 500px;
-        height: 500px;
+        height: 600px;
         border-radius: 10px;
         padding: 20px;
         margin: 20px;
       }
-      #top-section {
+      #map-top-section {
         display: flex;
         justify-content: space-between;
         width: 90%;
         margin: auto;
       }
-      #close-modal {
+      #map-close-modal {
         width: 30px;
         height: 30px;
         cursor: pointer;
@@ -99,11 +99,11 @@
   </head>
   <body>
     <button id="open_modal">Open Modal</button>
-    <div id="modal-container">
-      <div id="modal">
-        <div id="top-section">
+    <div id="map-modal-container">
+      <div id="map-modal">
+        <div id="map-top-section">
           <div><h2>Add your location</h2></div>
-          <div id="close-modal">
+          <div id="map-close-modal">
             <img
               src="https://thumbs.dreamstime.com/b/basic-rgb-156262164.jpg"
               alt="close-modal"
@@ -152,10 +152,10 @@
 
         <div id="search-result">
           <div id="idle-img">
-            <img
+            <!-- <img
               src="https://resources.dunzo.com/web-assets/prod/_next/static/images/partner_placeholder-f479db944bcaa4a7cc8451f617179d82.png"
               alt=""
-            />
+            /> -->
           </div>
         </div>
       </div>
@@ -165,21 +165,22 @@
 
 <script>
   const open_modal = document.getElementById("open_modal");
-  const modal_container = document.getElementById("modal-container");
-  const close_modal = document.getElementById("close-modal");
+  const modal_container = document.getElementById("map-modal-container");
+  const close_modal = document.getElementById("map-close-modal");
 
 
  
 let curloc=document.getElementById("curloc");
 let mapif=document.getElementById("mapif")
 
-curloc.addEventListener("click",()=>{
-  mapif.classList.remove("invisible");
-  mapif.classList.add("visible");
-})
+// curloc.addEventListener("click",()=>{
+//   mapif.classList.remove("invisible");
+//   mapif.classList.add("visible");
+// })
 
   open_modal.addEventListener("click", () => {
     modal_container.classList.add("show");
+
   });
 
 

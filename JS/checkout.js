@@ -1,25 +1,25 @@
 function gotoMain() {
   window.location.href = `index.html`;
 }
-//Get cart details
-let products = JSON.parse(localStorage.getItem(`dunzoCart`));
-// console.log(products);
 
 //Display cart in Right Panel - START
-let showProductCount = document.getElementById(`count`);
-let productsCount = 0;
-let showTotalPrice = document.getElementById(`totalPrice`);
-let totalPrice = 0;
-let showTotalPriceFinal = document.getElementById(`totalPriceFinal`);
 let displayProdBox = document.getElementById(`p-r-t-b`);
 
 function cartShow() {
-  products.forEach((el) => {
-    // console.log(el);
+  //Get cart details
+  let products = JSON.parse(localStorage.getItem(`dunzoCart`));
+  displayProdBox.innerHTML = null;
+  let showProductCount = document.getElementById(`count`);
+  let productsCount = 0;
+  let showTotalPrice = document.getElementById(`totalPrice`);
+  let totalPrice = 0;
+  let showTotalPriceFinal = document.getElementById(`totalPriceFinal`);
 
+  products.forEach((el) => {
     let div = document.createElement(`div`);
 
     let name = document.createElement(`p`);
+    name.setAttribute(`id`, `nameIndividual`);
     name.textContent = `◾ ` + el.name;
 
     let count = document.createElement(`p`);
@@ -28,15 +28,22 @@ function cartShow() {
 
     let buttonRemove = document.createElement(`button`);
     buttonRemove.textContent = `-`;
+    buttonRemove.onclick = () => {
+      removeQuantityOfProduct(el);
+    };
 
     let buttonAdd = document.createElement(`button`);
     buttonAdd.textContent = `+`;
+    buttonAdd.onclick = () => {
+      addQuantityOfProduct(el);
+    };
 
     let addRemove = document.createElement(`div`);
     addRemove.setAttribute(`id`, `addRemove`);
     addRemove.append(buttonRemove, count, buttonAdd);
 
     let price = document.createElement(`p`);
+    price.setAttribute(`id`, `priceIndividual`);
     price.textContent = `₹ ` + el.price * el.qty;
     totalPrice += +(el.price * el.qty);
 
@@ -44,11 +51,44 @@ function cartShow() {
 
     displayProdBox.append(div);
   });
+  showProductCount.textContent = `( ${productsCount} Items )`;
+  showTotalPrice.textContent = `₹ ` + totalPrice;
+  showTotalPriceFinal.textContent = `₹ ` + (totalPrice + 20 + 30);
 }
 cartShow();
-showProductCount.textContent = `( ${productsCount} Items )`;
-showTotalPrice.textContent = `₹ ` + totalPrice;
-showTotalPriceFinal.textContent = `₹ ` + (totalPrice + 20 + 30);
+function addQuantityOfProduct(product) {
+  let cart_products = JSON.parse(localStorage.getItem("dunzoCart"));
+
+  cart_products.forEach((prod) => {
+    if (prod.name === product.name) {
+      prod.qty++;
+      localStorage.setItem("dunzoCart", JSON.stringify(cart_products));
+      cartShow();
+      // return;
+    }
+  });
+}
+function removeQuantityOfProduct(product) {
+  let cart_products = JSON.parse(localStorage.getItem("dunzoCart"));
+
+  let indexOfProduct = -1;
+
+  for (let i = 0; i < cart_products.length; i++) {
+    if (cart_products[i].name == product.name) {
+      indexOfProduct = i;
+      break;
+    }
+  }
+
+  if (cart_products[indexOfProduct].qty > 1) {
+    cart_products[indexOfProduct].qty--;
+  } else {
+    cart_products.splice(indexOfProduct, 1);
+  }
+
+  localStorage.setItem("dunzoCart", JSON.stringify(cart_products));
+  cartShow();
+}
 //Display cart in Right Panel ---- END
 
 //Payment method -------- START
@@ -149,8 +189,38 @@ window.onclick = function (event) {
     payModal.style.display = "none";
   }
 };
-function gotoThank(e) {
-  e.preventDefault();
-  window.location.href = `thankYou.html`;
-}
 //Credit card Modal --------- END
+
+//Credit Card Validations -------- START
+let form_details = document.getElementById(`payForm`);
+let warning = document.getElementById(`warning`);
+let finishBtn = document.getElementById(`finishBtn`);
+
+finishBtn.addEventListener(`click`, function (e) {
+  e.preventDefault();
+  var validation_emptyFields = 0;
+  var validation_Number = 0;
+  var validation_CVV = 0;
+  for (let i = 0; i < form_details.length - 1; i++) {
+    if (form_details[i].value == `` || form_details[i].value == null) {
+      validation_emptyFields++;
+    }
+  }
+  if (form_details[0].value.length != 16) {
+    validation_Number++;
+  }
+  if (form_details[2].value.length != 3) {
+    validation_CVV++;
+  }
+
+  if (validation_emptyFields > 0) {
+    warning.textContent = `* One or more fields are empty`;
+  } else if (validation_Number > 0) {
+    warning.textContent = `* Enter a valid 16-digit card number`;
+  } else if (validation_CVV > 0) {
+    warning.textContent = `* CVV is the unique 3 dight number at the back of your card`;
+  } else {
+    window.location.href = `thankYou.html`;
+  }
+});
+//Credit Card Validations -------- END

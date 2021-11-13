@@ -16,8 +16,6 @@ let displayProdBox = document.getElementById(`p-r-t-b`);
 function cartShow() {
   products.forEach((el) => {
     // console.log(el);
-    productsCount++;
-    totalPrice += +el.price;
 
     let div = document.createElement(`div`);
 
@@ -26,6 +24,7 @@ function cartShow() {
 
     let count = document.createElement(`p`);
     count.textContent = el.qty;
+    productsCount += el.qty;
 
     let buttonRemove = document.createElement(`button`);
     buttonRemove.textContent = `-`;
@@ -39,6 +38,7 @@ function cartShow() {
 
     let price = document.createElement(`p`);
     price.textContent = `₹ ` + el.price * el.qty;
+    totalPrice += +(el.price * el.qty);
 
     div.append(name, addRemove, price);
 
